@@ -6,90 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Allen</title>
     <style type="text/css">
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 40px;
+            background-color: rgb(22, 27, 34);
             font-family: sans-serif;
-            margin: 80px 0px 0px 0px;
-            background-color: saddlebrown;
         }
-
-        nav {
-            background-color: rgb(10,10,20);
+        nav{
             position: fixed;
-            display: flex;
             top: 0;
-            left: 0;
-            height: 100%;
-            width: 200px;
+            z-index: 1;
+            background-color: rgb(13,17,23);
+            width: 100%;
+            height: 60px;
             box-shadow: 0 0 25px 0 black;
-            align-content: center;
         }
-
-        nav #profile{
-            position: static;
-            width: 100%;
-            text-align: center;
-            margin: 0 0 50px 0;
+        nav li{
+            float: left;
+            display: inline;
         }
-        nav ul{
-            width: 100%;
-            padding: 0;
-        }
-        nav li {
-            padding: 10px 10px 10px 20px;
-            list-style: none;
-        }
-
-        nav ul a {
-            width: 100%;
-            color: rgb(220,220,220);
+        nav ul li a{
             text-decoration: none;
+            color: rgb(220,220,220);
+            display: block;
+            text-align: center;
+            padding: 18px 25px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        nav ul li a:hover, .active{
+            color: rgb(150,150,170);
+            font-size: 16px;
+            padding: 16px 21px;
         }
 
-        #profilepic{
-            padding: 0;
-            height: 70px;
-            width: 70px;
-            border-style: solid;
-            border-width: 5px;
-            border-radius: 100%;
-            border-color: rgb(40,40,60);
-        }
-
-        #content {
-            background-image: url("images/2.JPG");
-            background-repeat: no-repeat;
-            background-size: 80%;
-            background-position: center;
-            background-position-x: 100px;
+        #navOptions{
+            position: absolute;
             top: 0;
             right: 0;
-            bottom: 0;
-            left: 200px;
-            position: fixed;
-        }
-
-        #intro {
-            width: 100%;
+            text-decoration: none;
+            padding-top: 10px;
+            width: 30%;
             height: 100%;
-            background-color: rgba(10,10,20,.3);
+            list-style-type: none;
         }
-
-        #intro p{
-            margin: 0;
+        #logo{
+            top: 10px;
+            left: 100px;
+            position: absolute;
+            background-image: url("images/logo.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 40px;
+            width: 40px;
+        }
+        #picHead{
+            opacity: .8;
+            height: 100%;
+        }
+        #picContainter{
+            background-color: rgb(13,17,23);
+            border-color: rgb(10,15,21);
+            height: 400px;
+            width: 400px;
+            border-style: solid;
+            border-width: 10px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+        #Pcontainer{
+            margin-top: 100px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
+        
         <nav>
-            <ul>
-                <div id="profile" style="align-content: center;">
-                    <a href="#">
-                        <img id="profilepic" src="images/2.JPG"><br>
-                        Mark Allen
-                    </a>
-                </div>
-                <li><a href="#">Home</a></li>asd
+            <div id="logo"></div>
+            <br>
+            <ul id="navOptions">
+                <li><a href="." class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="project.html">Project</a></li>
@@ -99,6 +101,7 @@
     </header>
     <br>
     <div id="content">
+        <div id="Pcontainer" align="center"><div id="picContainter"><img src="images/head2.png" id="picHead"></div></div>
         <div id="intro">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit officiis dolores eum ratione fugit? Temporibus exercitationem perferendis debitis, odit veritatis aspernatur a deserunt. Rem quidem, iure assumenda cupiditate odit voluptates!</p>
         </div>
