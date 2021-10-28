@@ -1,10 +1,40 @@
+#title{
+    margin-top: 50px;
+    padding: 20px 50px;
+    width: 300px;
+    color: rgb(220,220,220);
+    background-color: rgba(13,17,23,.9);
+}
+
 #imagesP{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
-#imagesP div img{
-    height: 300px;
-    width: 450px;
+
+div.works div.pLH img.pL{
+    height: 80px;
+    width: 80px;
+    margin-top: 80px;
+}
+
+.pLH{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(10,10,10,.8);
+    height: 205px;
+    width: 355px;
+}
+
+.works:hover .pLH{
+    z-index: -1;
+}
+
+
+.workPic{
+    height: 200px;
+    width: 350px;
 }
 
 .works{
@@ -12,5 +42,4 @@
     display: inline;
     width: 40%;
     margin: 40px 40px;
-    background-color: #fff;
 }
