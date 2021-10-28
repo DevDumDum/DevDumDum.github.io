@@ -99,6 +99,13 @@ nav ul li a:hover, .active{
 #picHead{
     margin-bottom: -5px;
     width: 100%;
+    animation: picHead 2s linear;
+}
+
+@keyframes picHead {
+    0%{opacity: 0;}
+    80%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 #links{
@@ -136,7 +143,7 @@ nav ul li a:hover, .active{
     width: 44%;
     right: 0;
     bottom: 150px;
-    background-color: rgb(13,17,23);
+    background-color: rgba(13,17,23,.9);
     overflow: hidden;
     animation: alternate 1.5s show;
     color: rgb(220,220,220);
@@ -156,8 +163,9 @@ h1{
 #promoteContainer{
     width: 100%;
     height: 300px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     background-color: rgb(13,17,23);
+    overflow: hidden;
 }
 
 #promote{
@@ -165,12 +173,15 @@ h1{
     width: 80%;
 }
 #quote{
+    background-color: rgba(13,17,23,.9);
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: 50px;
+    float: left;
     width: 350px;
 }
 #qt{
     color: rgb(100,100,100);
+    animation: picHead 2.5s linear;
 }
 
 #slide{
