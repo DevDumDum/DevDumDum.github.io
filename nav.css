@@ -142,9 +142,8 @@ nav ul li a:hover, .active{
     padding-bottom: 30px;
     width: 44%;
     right: 0;
-    bottom: 150px;
+    bottom: 100px;
     background-color: rgba(13,17,23,.9);
-    overflow: hidden;
     animation: alternate 1.5s show;
     color: rgb(220,220,220);
     cursor:default;
@@ -175,7 +174,6 @@ h1{
     background-color: rgba(13,17,23,.9);
     margin-top: 100px;
     margin-left: 50px;
-    float: left;
     width: 350px;
 }
 #qt{
