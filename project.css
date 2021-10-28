@@ -1,14 +1,31 @@
 #title{
+    position: absolute;
+    left: 0;
     margin-top: 50px;
-    padding: 20px 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
     width: 300px;
-    color: rgb(220,220,220);
-    background-color: rgba(13,17,23,.9);
+    color: rgb(20,20,20);
+    background-color: rgb(220,220,220);;
+    animation: titleshow 1s linear;
+    overflow: hidden;
+}
+
+@keyframes titleshow {
+    0%{margin-left: -400px;}
+    50%{margin-left: -400px;}
+    100%{margin-left: 0px;}
 }
 
 #imagesP{
-    margin-top: 50px;
+    margin-top: 200px;
     margin-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 900px;
+    border-radius: 50px;
+    background-color: rgb(220,220,220);
 }
 
 div.works div.pLH img.pL{
@@ -23,14 +40,17 @@ div.works div.pLH img.pL{
     bottom: 0;
     z-index: 1;
     background-color: rgba(10,10,10,.8);
-    height: 205px;
-    width: 355px;
+    height: 200px;
+    width: 350px;
 }
 
 .works:hover .pLH{
     z-index: -1;
 }
 
+li{
+    display: inline;
+}
 
 .workPic{
     height: 200px;
@@ -41,5 +61,5 @@ div.works div.pLH img.pL{
     position: relative;
     display: inline;
     width: 40%;
-    margin: 40px 40px;
+    margin: 5px 5px;
 }
