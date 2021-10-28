@@ -84,6 +84,7 @@ nav ul li a:hover, .active{
     position: relative;
     background-color: rgb(22, 27, 34);
     height: 500px;
+    overflow: hidden;
 }
 
 #picContainter{
@@ -104,6 +105,13 @@ nav ul li a:hover, .active{
     position: relative;
     top: 50px;
     left: 0;
+    animation: linkAnimation 2s linear;
+}
+
+@keyframes linkAnimation {
+    0%{left: -100px;}
+    80%{left: -100px;}
+    100%{left: 0px;}
 }
 
 #links img{
@@ -146,7 +154,7 @@ h1{
 #promoteContainer{
     width: 100%;
     height: 300px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     background-color: rgb(13,17,23);
 }
 
@@ -155,11 +163,36 @@ h1{
     width: 80%;
 }
 #quote{
+    margin-top: 100px;
     margin-left: 100px;
     width: 350px;
 }
 #qt{
     color: rgb(100,100,100);
+}
+
+#slide{
+    position: relative;
+    right: 0;
+    width: 1210px;
+    background-color: brown;
+    animation: 8s alternate sliding;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sliding {
+    0%{right: 0px;}
+    30%{right: 0px;}
+    35%{right: 405px;}
+    75%{right: 405px;}
+    80%{right: 810px;}
+    100%{right: 810px;}
+
+}
+
+#slide img{
+    height: 300px;
+    width: 400px;
 }
 
 
