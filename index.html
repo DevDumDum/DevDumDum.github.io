@@ -12,16 +12,18 @@
             padding: 0;
         }
         body{
-            margin-top: 100px;
-            background-color: rgb(22, 27, 34);
+            padding-top: 60px;
+            background-image: url("images/bg.jpg");
+            background-size: contain;
+            background-position: center;
             font-family: sans-serif;
         }
         nav{
             position: fixed;
             color: rgb(220,220,220);
             top: 0;
-            z-index: 1;
-            background-color: rgb(13,17,23);
+            z-index: 2 ;
+            background-color: rgb(8,12,18);
             width: 100%;
             height: 60px;
         }
@@ -47,10 +49,10 @@
         }
 
         #navOptions{
-            background-color: rgb(13,17,23);
+            background-color: rgb(8,12,18);
             position: absolute;
             top: 0;
-            right: 50px;
+            right: 5%;
             text-decoration: none;
             margin-top: 10px;
             height: 50px;
@@ -82,51 +84,83 @@
 
         }
 
+        #bg{
+            width:90%;
+            margin-left: 5%;
+        }
+
         #content{
             position: relative;
-            width:100%;
+            background-color: rgb(22, 27, 34);
+            padding-top: 50px;
             height: 500px;
         }
 
         #picContainter{
             position:absolute;
-            left: 20%;
+            z-index: 0;
+            left: 15%;
             bottom: 0;
-            top:25px;
             width: 400px;
             padding: 40px 50px 0px 50px;
             overflow: hidden;
         }
         #picHead{
+            margin-bottom: -5px;
             width: 100%;
         }
 
         #intro{
             position: absolute;
             z-index: 1;
-            padding: 70px 70px 20px 70px;
-            width: 40%;
+            padding-top: 30px;
+            padding-left: 50px;
+            padding-bottom: 30px;
+            width: 45%;
             right: 0;
-            background-color: rgba(200,200,200,.7);
+            background-color: rgb(13,17,23);
+            overflow: hidden;
+            animation: alternate 1.5s show;
+            color: rgb(220,220,220);
+        }
+        @keyframes show {
+            0% {width: 0%;padding-left:0;}
+            50% {width: 0%;padding-left:0;}
+            100% {width: 45%;}
         }
         h1{
             font-family: cursive;
             font-size: 35px;
         }
 
-        #social{
+        #promoteContainer{
             width: 100%;
             height: 300px;
+            padding-bottom: 50px;
             background-color: rgb(13,17,23);
         }
 
+        #promote{
+            margin-left: 10%;
+            width: 80%;
+        }
+        #quote{
+            margin-left: 100px;
+            width: 350px;
+        }
+        #qt{
+            color: rgb(100,100,100);
+        }
         footer{
-            position: absolute;
+            position: relative;
+            left: 0px;
+            right: 0px;
             bottom: 0px;
-            background-color: rgb(13,17,23);
-            width:90%;
-            margin-left: 5%;
-            height: 100px;
+            background-color: rgb(8,12,18);
+            padding: 5px 40px;
+            color: rgb(220,220,220);
+            font-size: 15px;
+            text-align: right;
         }
     </style>
 </head>
@@ -144,21 +178,40 @@
             </ul>
         </nav>
     </header>
-    <div id="content">
-        <div id="intro">
-            <h1>Hi! I'm Mark Allen Cabutaje</h1>
-            <p>Developer</p>
+    <div id="bg">
+        <div id="content">
+            <div id="intro">
+                <div style="width: 600px;">
+                    <div style="padding-left: 110px;">
+                        <h1>I'm</h1>
+                    </div>
+                    <h1>Mark Allen Cabutaje</h1>
+                        <div style="padding-left: 110px;">
+                            <span style="color: rgb(192, 47, 47);">Developer</span>
+                        </div>
+                </div>
+            </div>
+            <br>
+            <div id="picContainter">
+                <img src="images/head2.png" id="picHead">
+            </div>
         </div>
-        <br>
-        <div id="picContainter">
-            <img src="images/head2.png" id="picHead">
+        <div id="promoteContainer">
+            <br><br>
+            <div id="promote">
+                <hr>
+                <br><br><br><br><br><br>
+                <div id="quote">
+                    <h1 id="qt">
+                        "I <span style="color: rgb(192, 47, 47);">build</span>  and
+                        <div align="right">make <span style="color: royalblue;">fun</span> stuff"</div>
+                    </h1>
+            </div>      
+            </div>
         </div>
-    </div>
-    <div id="social">
-        sad
     </div>
     <footer>
-        <hr >
+        &copy; Copyright 2021 MakuDev
     </footer>
 </body>
 </html>
