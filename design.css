@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding-top: 60px;
+    background-image: url("images/bg.jpg");
+    background-size: contain;
+    background-position: center;
+    font-family: sans-serif;
+}
+nav{
+    position: fixed;
+    color: rgb(220,220,220);
+    top: 0;
+    z-index: 2 ;
+    background-color: rgb(8,12,18);
+    width: 100%;
+    height: 60px;
+}
+nav li{
+    float: left;
+    display: inline;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(220,220,220);
+    display: block;
+    text-align: center;
+    padding: 18px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background-color .2s linear;
+}
+nav ul li a:hover, .active{
+    color: rgb(192, 47, 47);
+    font-size: 16px;
+    padding: 16px 20px;
+    background-color: rgb(22, 27, 34);
+}
+
+#navOptions{
+    background-color: rgb(8,12,18);
+    position: absolute;
+    top: 0;
+    right: 10%;
+    text-decoration: none;
+    margin-top: 10px;
+    height: 50px;
+    list-style-type: none;
+}
+#logoContainer{
+    margin: 10px 0px 0px 100px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    transition: width .2s linear;
+}
+#logoContainer:hover{
+    width: 140px;
+}
+
+#logo{
+    height: 40px;
+    width: 40px;
+}
+#lname{
+    font-weight: bold;
+    top: 18px;
+    width: 100px;
+    position: absolute;
+    color: rgb(192, 47, 47);
+    font-size: 12px;
+
+}
+
+#bg{
+    width:80%;
+    margin-left: 10%;
+}
+
+#content{
+    position: relative;
+    background-color: rgb(22, 27, 34);
+    height: 500px;
+}
+
+#picContainter{
+    position:absolute;
+    z-index: 0;
+    left: 15%;
+    bottom: 0;
+    width: 400px;
+    padding: 40px 50px 0px 50px;
+    overflow: hidden;
+}
+#picHead{
+    margin-bottom: -5px;
+    width: 100%;
+}
+
+#links{
+    position: relative;
+    top: 50px;
+    left: 0;
+}
+
+#links img{
+    margin-top: 35px;
+    margin-left: 25px;
+    height: 65px;
+    width: 65px;
+}
+
+#links img:hover{
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+#intro{
+    position: absolute;
+    z-index: 1;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    width: 44%;
+    right: 0;
+    bottom: 150px;
+    background-color: rgb(13,17,23);
+    overflow: hidden;
+    animation: alternate 1.5s show;
+    color: rgb(220,220,220);
+}
+@keyframes show {
+    0% {width: 0%;padding-left:0;}
+    50% {width: 0%;padding-left:0;}
+    100% {width: 44%;}
+}
+h1{
+    font-family: cursive;
+    font-size: 35px;
+}
+
+#promoteContainer{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 50px;
+    background-color: rgb(13,17,23);
+}
+
+#promote{
+    margin-left: 10%;
+    width: 80%;
+}
+#quote{
+    margin-left: 100px;
+    width: 350px;
+}
+#qt{
+    color: rgb(100,100,100);
+}
+
+
+footer{
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(8,12,18);
+    padding: 5px 40px;
+    color: rgb(220,220,220);
+    font-size: 15px;
+    text-align: right;
+}

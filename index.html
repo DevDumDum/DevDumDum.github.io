@@ -6,168 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MakuDev</title>
     <link rel="icon" type="image/png" href="images/logo.png"/>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            padding-top: 60px;
-            background-image: url("images/bg.jpg");
-            background-size: contain;
-            background-position: center;
-            font-family: sans-serif;
-        }
-        nav{
-            position: fixed;
-            color: rgb(220,220,220);
-            top: 0;
-            z-index: 2 ;
-            background-color: rgb(8,12,18);
-            width: 100%;
-            height: 60px;
-        }
-        nav li{
-            float: left;
-            display: inline;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: rgb(220,220,220);
-            display: block;
-            text-align: center;
-            padding: 18px 25px;
-            font-size: 13px;
-            font-weight: 600;
-            transition: background-color .2s linear;
-        }
-        nav ul li a:hover, .active{
-            color: rgb(192, 47, 47);
-            font-size: 16px;
-            padding: 16px 20px;
-            background-color: rgb(22, 27, 34);
-        }
-
-        #navOptions{
-            background-color: rgb(8,12,18);
-            position: absolute;
-            top: 0;
-            right: 5%;
-            text-decoration: none;
-            margin-top: 10px;
-            height: 50px;
-            list-style-type: none;
-        }
-        #logoContainer{
-            margin: 10px 0px 0px 100px;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            overflow: hidden;
-            transition: width .2s linear;
-        }
-        #logoContainer:hover{
-            width: 140px;
-        }
-
-        #logo{
-            height: 40px;
-            width: 40px;
-        }
-        #lname{
-            font-weight: bold;
-            top: 18px;
-            width: 100px;
-            position: absolute;
-            color: rgb(192, 47, 47);
-            font-size: 12px;
-
-        }
-
-        #bg{
-            width:90%;
-            margin-left: 5%;
-        }
-
-        #content{
-            position: relative;
-            background-color: rgb(22, 27, 34);
-            padding-top: 50px;
-            height: 500px;
-        }
-
-        #picContainter{
-            position:absolute;
-            z-index: 0;
-            left: 15%;
-            bottom: 0;
-            width: 400px;
-            padding: 40px 50px 0px 50px;
-            overflow: hidden;
-        }
-        #picHead{
-            margin-bottom: -5px;
-            width: 100%;
-        }
-
-        #intro{
-            position: absolute;
-            z-index: 1;
-            padding-top: 30px;
-            padding-left: 50px;
-            padding-bottom: 30px;
-            width: 45%;
-            right: 0;
-            background-color: rgb(13,17,23);
-            overflow: hidden;
-            animation: alternate 1.5s show;
-            color: rgb(220,220,220);
-        }
-        @keyframes show {
-            0% {width: 0%;padding-left:0;}
-            50% {width: 0%;padding-left:0;}
-            100% {width: 45%;}
-        }
-        h1{
-            font-family: cursive;
-            font-size: 35px;
-        }
-
-        #promoteContainer{
-            width: 100%;
-            height: 300px;
-            padding-bottom: 50px;
-            background-color: rgb(13,17,23);
-        }
-
-        #promote{
-            margin-left: 10%;
-            width: 80%;
-        }
-        #quote{
-            margin-left: 100px;
-            width: 350px;
-        }
-        #qt{
-            color: rgb(100,100,100);
-        }
-        footer{
-            position: relative;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-            background-color: rgb(8,12,18);
-            padding: 5px 40px;
-            color: rgb(220,220,220);
-            font-size: 15px;
-            text-align: right;
-        }
-    </style>
+    <link rel="stylesheet" href="design.css">
 </head>
 <body>
     <header>        
         <nav>
-            <div id="logoContainer"><a href="."><img id="logo" src="images/logo.png"><span id="lname">&nbspA K U&nbsp;&nbsp;&nbsp;D E V&nbsp;</span></a></div>
+            <div id="logoContainer"><a href="."><img id="logo" src="images/logo/logo.png"><span id="lname">&nbspA K U&nbsp;&nbsp;&nbsp;D E V&nbsp;</span></a></div>
             <br>
             <ul id="navOptions">
                 <li><a href="." class="active">Home</a></li>
@@ -186,14 +30,18 @@
                         <h1>I'm</h1>
                     </div>
                     <h1>Mark Allen Cabutaje</h1>
-                        <div style="padding-left: 110px;">
-                            <span style="color: rgb(192, 47, 47);">Developer</span>
-                        </div>
+                    <div style="padding-left: 110px;">
+                        <span style="color: rgb(192, 47, 47);">Developer</span>
+                    </div>
                 </div>
             </div>
-            <br>
             <div id="picContainter">
                 <img src="images/head2.png" id="picHead">
+            </div>
+            <div id="links">
+                <a href="https://www.linkedin.com/in/mark-allen-cabutaje-3a99291b6/"><img src="images/logo/in.png"></a><br>
+                <a href="https://www.github.com/MakuAren"><img src="images/logo/git.png"></a><br>
+                <a href="https://www.facebook.com/markallen.cabutaje/"><img src="images/logo/fb.png"></a>
             </div>
         </div>
         <div id="promoteContainer">
@@ -206,7 +54,7 @@
                         "I <span style="color: rgb(192, 47, 47);">build</span>  and
                         <div align="right">make <span style="color: royalblue;">fun</span> stuff"</div>
                     </h1>
-            </div>      
+                </div>   
             </div>
         </div>
     </div>
