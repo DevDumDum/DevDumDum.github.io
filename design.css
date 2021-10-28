@@ -105,12 +105,12 @@ nav ul li a:hover, .active{
     position: relative;
     top: 50px;
     left: 0;
-    animation: linkAnimation 2s linear;
+    animation: linkAnimation 1.5s linear;
 }
 
 @keyframes linkAnimation {
     0%{left: -100px;}
-    80%{left: -100px;}
+    90%{left: -100px;}
     100%{left: 0px;}
 }
 
