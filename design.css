@@ -140,6 +140,7 @@ nav ul li a:hover, .active{
     overflow: hidden;
     animation: alternate 1.5s show;
     color: rgb(220,220,220);
+    cursor:default;
 }
 @keyframes show {
     0% {width: 0%;padding-left:0;}
@@ -149,6 +150,7 @@ nav ul li a:hover, .active{
 h1{
     font-family: cursive;
     font-size: 35px;
+    cursor:default;
 }
 
 #promoteContainer{
@@ -175,9 +177,12 @@ h1{
     position: relative;
     right: 0;
     width: 1210px;
-    background-color: brown;
     animation: 8s alternate sliding;
     animation-iteration-count: infinite;
+}
+
+#slide:hover{
+    opacity: .5;
 }
 
 @keyframes sliding {
@@ -194,7 +199,6 @@ h1{
     height: 300px;
     width: 400px;
 }
-
 
 footer{
     position: relative;
