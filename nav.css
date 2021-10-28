@@ -162,10 +162,9 @@ h1{
 
 #promoteContainer{
     width: 100%;
-    height: 300px;
+    height: inherit;
     padding-bottom: 200px;
     background-color: rgb(13,17,23);
-    overflow: hidden;
 }
 
 #promote{

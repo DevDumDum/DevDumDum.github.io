@@ -1,0 +1,15 @@
+#imagesP{
+
+}
+#imagesP div img{
+    height: 300px;
+    width: 450px;
+}
+
+.works{
+    position: relative;
+    display: inline;
+    width: 40%;
+    margin: 10px 10px;
+    background-color: #fff;
+}
