@@ -1,0 +1,15 @@
+#container {
+    margin-top: 100px;
+    padding: 50px 50px;
+    padding-bottom: 0px;
+    width: 30%;
+    background-color: rgb(220,220,220);
+    text-align: left;
+    border-radius: 50px;
+}
+
+#container img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
