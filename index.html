@@ -12,7 +12,7 @@
             padding: 0;
         }
         body{
-            margin-top: 40px;
+            margin-top: 100px;
             background-color: rgb(22, 27, 34);
             font-family: sans-serif;
         }
@@ -81,29 +81,47 @@
             font-size: 12px;
 
         }
-        #picHead{
-            opacity: .8;
-            height: 100%;
+
+        #content{
+            position: relative;
+            width:70%;
+            height: 500px;
+            margin-left: 15%;
+            background: rgb(230, 230, 230);
         }
+
         #picContainter{
-            background-color: rgb(13,17,23);
-            border-color: rgb(10,15,21);
+            position:absolute;
+            left: 10%;
+            bottom: 0;
             height: 400px;
             width: 400px;
-            border-style: solid;
-            border-width: 10px;
-            border-radius: 100%;
-            overflow: hidden;
         }
-        #Pcontainer{
-            margin-top: 100px;
-            width: 100%;
+        #picHead{
+            height: 100%;
+        }
+
+        #intro{
+            position: absolute;
+            padding: 20px 70px;
+            right: 0;
+            background-color: rgba(200,200,200,.7);
+
+
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0px;
+            background-color: rgb(13,17,23);
+            width:90%;
+            margin-left: 5%;
+            height: 100px;
         }
     </style>
 </head>
 <body>
-    <header>
-        
+    <header>        
         <nav>
             <div id="logoContainer"><a href="."><img id="logo" src="images/logo.png"><span id="lname">&nbspA K U&nbsp;&nbsp;&nbsp;D E V&nbsp;</span></a></div>
             <br>
@@ -116,13 +134,17 @@
             </ul>
         </nav>
     </header>
-    <br>
     <div id="content">
-        <div id="Pcontainer" align="center"><div id="picContainter"><img src="images/head2.png" id="picHead"></div></div>
         <div id="intro">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit officiis dolores eum ratione fugit? Temporibus exercitationem perferendis debitis, odit veritatis aspernatur a deserunt. Rem quidem, iure assumenda cupiditate odit voluptates!</p>
+            <h1>Hi! I'm Mark Allen Cabutaje</h1>
+            <p>Developer</p>
+        </div>
+        <div id="picContainter">
+            <img src="images/head2.png" id="picHead">
         </div>
     </div>
-    <br>
+    <footer>
+        <hr >
+    </footer>
 </body>
 </html>
