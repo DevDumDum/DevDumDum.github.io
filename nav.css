@@ -135,23 +135,24 @@ nav ul li a:hover, .active{
 }
 
 #intro{
-    position: absolute;
+    position: relative;
+    float: right;
     z-index: 1;
     padding-top: 30px;
     padding-left: 50px;
     padding-bottom: 30px;
-    width: 44%;
     right: 0;
-    bottom: 100px;
+    width: 40%;
+    bottom: 50px;
     background-color: rgba(13,17,23,.9);
     animation: alternate 1.5s show;
     color: rgb(220,220,220);
     cursor:default;
 }
 @keyframes show {
-    0% {width: 0%;padding-left:0;}
-    50% {width: 0%;padding-left:0;}
-    100% {width: 44%;}
+    0% {margin-right: -500px;}
+    50% {margin-right: -500px;}
+    100% {margin-right: 0px;}
 }
 h1{
     font-family: cursive;
@@ -166,9 +167,23 @@ h1{
     background-color: rgb(13,17,23);
 }
 
-#promote{
+#promote {
+    width: 80%;
+    margin: 0px 10%;
+    text-align: left;
+}
+#homeSlide{
+    margin-right: 50px;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+    float: right;
+}
+
+hr{
     margin-left: 10%;
     width: 80%;
+    margin-bottom: 20px;
 }
 #quote{
     background-color: rgba(13,17,23,.9);
@@ -217,4 +232,60 @@ footer{
     color: rgb(220,220,220);
     font-size: 15px;
     text-align: right;
+}
+
+
+@media screen and (max-width: 1100px){
+    #intro{
+        bottom: 0px;
+        left: 30%;
+        width: 100%;
+    }
+    #homeSlide{
+        margin-top: 0px;
+        margin-right: 0px;
+        position: relative;
+        float: none;
+    }
+    #intro{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #navOptions{
+        right: 5%;
+        width: 90%;
+        left: 5%;
+    
+    }
+    #logoContainer{
+        display: none;
+    }
+    #bg{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #picContainter{
+        left: 10%;
+        padding: 0;
+    }
+    nav ul li a{
+        padding: 18px 20px;
+    }
+    #promote{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #intro{
+        left: 0px;
+        float: none;
+        padding-left: 10%;
+    }
+    #homeSlide{
+        float: none;
+    }
 }

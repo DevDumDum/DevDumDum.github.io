@@ -24,7 +24,19 @@
     border-width: 10px;
     border-style: solid;
     border-color: rgb(220,220,220);
-    height: 250px;
-    width: 250px;
+    height: 30%;
+    width: 30%;
     float: left;
+}
+
+#info{
+    margin-left: 20%;
+    margin-top: 10%;
+    background-color: rgb(220,220,220);
+    padding-top:50px;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 5%;
+    border-radius: 50px;
+    animation: showinfo .5s linear;
 }

@@ -13,10 +13,11 @@
 }
 #skillContainer{
     margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-bottom: 100px;
     padding-top: 70px;
     padding-bottom: 70px;
-    width: 900px;
     border-radius: 50px;
     background-color: rgb(220,220,220);
     padding-left: 50px;
@@ -32,4 +33,11 @@ li{
     0%{margin-left: -400px;}
     50%{margin-left: -400px;}
     100%{margin-left: 0px;}
+}
+
+@media screen and (max-width: 810px) {
+    #skillContainer{
+        margin-left: 0px;
+        margin-right: 0px;
+}
 }
