@@ -28,7 +28,7 @@ nav ul li a{
     display: block;
     text-align: center;
     padding: 18px 25px;
-    font-size: 13px;
+    font-size: 80%;
     font-weight: 600;
     transition: background-color .2s linear;
 }
@@ -76,6 +76,8 @@ nav ul li a:hover, .active{
 }
 
 #bg{
+    background-color: rgb(22, 27, 34);
+    min-height: 800px;
     width:80%;
     margin-left: 10%;
 }
@@ -174,8 +176,8 @@ h1{
 }
 #homeSlide{
     margin-right: 50px;
-    height: 300px;
-    width: 400px;
+    max-height: 300px;
+    max-width: 400px;
     overflow: hidden;
     float: right;
 }
@@ -189,7 +191,7 @@ hr{
     background-color: rgba(13,17,23,.9);
     margin-top: 100px;
     margin-left: 50px;
-    width: 350px;
+    max-width: 350px;
 }
 #qt{
     color: rgb(100,100,100);
@@ -274,9 +276,6 @@ footer{
     nav ul li a{
         padding: 18px 20px;
     }
-    #promote{
-        margin: 0;
-    }
 }
 
 @media screen and (max-width: 560px) {
@@ -287,5 +286,14 @@ footer{
     }
     #homeSlide{
         float: none;
+    }
+    nav ul li a{
+        padding: 18px 15px;
+    }
+    nav ul li a:hover, .active{
+        color: rgb(192, 47, 47);
+        font-size: 16px;
+        padding: 16px 15px;
+        background-color: rgb(22, 27, 34);
     }
 }
