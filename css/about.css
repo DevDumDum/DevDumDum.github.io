@@ -10,7 +10,7 @@
     background-color: rgb(220,220,220);;
     animation: titleshow 1s linear;
     overflow: hidden;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: -5px 5px 5px black;
 }
 
 @keyframes titleshow {
