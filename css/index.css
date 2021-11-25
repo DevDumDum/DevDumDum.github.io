@@ -1,0 +1,119 @@
+#picContainter{
+    position:absolute;
+    left: 15%;
+    bottom: 0;
+    height: 95%;
+    padding: 40px 50px 0px 50px;
+    overflow: hidden;
+}
+#picHead{
+    margin-bottom: -5px;
+    height: 100%;
+    animation: picHead 2s linear;
+}
+
+@keyframes picHead {
+    0%{opacity: 0;}
+    80%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#links{
+    position: absolute;
+    z-index: 2;
+    animation: linkAnimation 1.5s linear;
+}
+
+@keyframes linkAnimation {
+    0%{left: -100px;}
+    90%{left: -100px;}
+    100%{left: 0px;}
+}
+
+#links img{
+    margin-top: 35px;
+    margin-left: 25px;
+    height: 65px;
+    width: 65px;
+}
+
+#links img:hover{
+    margin-top: 20px;
+    height: 80px;
+    width: 80px;
+}
+
+#intro{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    padding: 20px 30px;
+    bottom: 20px;
+    background-color: rgba(13,17,23,.9);
+    animation: alternate 1.5s show;
+    color: rgb(220,220,220);
+    cursor:default;
+}
+@keyframes show {
+    0% {margin-right: -500px;}
+    50% {margin-right: -500px;}
+    100% {margin-right: 0px;}
+}
+h1{
+    font-family: cursive;
+    font-size: 35px;
+    cursor:default;
+}
+
+#promoteContainer{
+    width: 100%;
+    height: inherit;
+    padding-bottom: 50px;
+    background-color: rgb(13,17,23);
+}
+
+hr{
+    margin-left: 10%;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#quote{
+    background-color: rgba(13,17,23,.9);
+    max-width: 400px;
+    text-align: left;
+}
+#qt{
+    color: rgb(100,100,100);
+}
+
+.d-block{
+    width:100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 1100px){
+    #intro{
+        left: 0px;
+        width: 100%;
+    }
+
+    #homeSlide{
+        margin-top: 0px;
+        margin-right: 0px;
+        position: relative;
+        float: none;
+    }
+    #demo{
+        margin-right: 0px !important;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #picContainter{
+        height: 90%;
+        left: 5%;
+        padding: 0;
+    }
+}

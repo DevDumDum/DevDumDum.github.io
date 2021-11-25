@@ -1,0 +1,36 @@
+#title{
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 50px;
+    color: rgb(20,20,20);
+    background-color: rgb(220,220,220);;
+    animation: titleshow 1s linear;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+}
+
+@keyframes titleshow {
+    0%{left: -400px;}
+    50%{left: -400px;}
+    100%{left: 0px;}
+}
+
+#contact {
+    margin-top: 200px;
+    padding: 50px 40px;
+    padding-bottom: 0px;
+    max-width: 450px;
+    background-color: rgb(220,220,220);
+    text-align: left;
+    border-radius: 50px;
+}
+
+#contact img{
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
