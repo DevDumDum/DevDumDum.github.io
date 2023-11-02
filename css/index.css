@@ -281,7 +281,7 @@ nav{
 
 #folderContainer {
     height: max-content;
-    min-height: 400px;
+    min-height: 300px;
 }
 
 .projectContainer {
@@ -301,12 +301,13 @@ nav{
 
 }
 
-.projectContainer:hover .projectPic{
+.projectContainer:hover .projectPic {
     transform: translateY(-40px) translateX(10px);
 }
 
-.projectContainer:hover .folderClose{
+.projectContainer:hover .folderClose {
     transform: translateX(20px) skewX(-15deg);
+    background-color: rgba(255, 215, 95,0.9);
 }
 
 .projectPic {
@@ -331,7 +332,7 @@ nav{
     transform: translateX(7px) skewX(-5deg);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: gray;
+    background-color: rgba(150,150,150, 0.90);
     transition: .2s linear;
 }
 
