@@ -1,8 +1,46 @@
+#loading {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15,15,15);
+    z-index: 11;
+    opacity: 1;
+    transition: .5s linear;
+}
+
+#loadingLogo {
+    margin: auto;
+    height: 80px;
+    animation: loading 3s alternate-reverse infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: perspective(250px) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: perspective(250px) rotateX(180deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(250px) rotateX(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: perspective(250px) rotateX(360deg) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(250px) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
 html {
 scroll-behavior: smooth;
 }
 
 body{
+    position: fixed;
     background-color: rgb(15, 15, 15);
     font-family: sans-serif;
     color: rgb(220,220,220);

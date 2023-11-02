@@ -8,11 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
-<body>
+<body id="body">
+    <div id="loading">
+        <img id="loadingLogo" src="assets/images/logo.png" alt="logo">
+    </div>
     <header>        
         <nav id="MyNav" class="navbar-expand-sm navbar-dark">
             <div id="logoContainer">
                 <a href="#Home">
+                    <!-- The Logo used is from adobe stock-->
                     <img id="logo" src="assets/images/logo.png" alt="logo">
                     <span id="lname">AKU</span>
                 </a>
@@ -45,6 +49,7 @@
                 <div id="title"><hr id="titleDivider"><span id="titleLabel">SKILLS</span></div>
                 <div id="pastIconTray">
                     <span>Languages and tools I've worked with:</span><br>
+                    <!-- The Icons used are from skillicons.dev-->
                     <div class="skillIcons">
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:html.svg"><span>HTML</span></div>
                         <div class="iconContainer"><img alt="css" src="https://api.iconify.design/skill-icons:css.svg"><span>CSS</span></div>
@@ -85,6 +90,16 @@
     </footer>
 
     <script>
+        window.addEventListener("load", event => {
+            var image = document.querySelector('img');
+            var isLoaded = image.complete && image.naturalHeight !== 0;
+            document.getElementById('loading').style.opacity = 0;
+            document.getElementById('body').style.position = 'relative';
+            setTimeout(function(){
+                document.getElementById('loading').style.display = 'none';
+            }, 500);
+        });
+
         var btnContainer = document.getElementById("shortcuts");
         var btns = btnContainer.getElementsByClassName("btn");
         for (var i = 0; i < btns.length; i++) {
