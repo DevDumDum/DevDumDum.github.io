@@ -65,15 +65,21 @@ nav{
     justify-content: center;
 }
 
+#avatar {
+    width: 100%;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+}
+
 #pf {
     max-height: 200px;
     height: 65%;
     border-radius: 100%;
-    margin-top: 150px;
 }
 
 #content {
-    margin: auto;
+    margin: -100px auto;
     width: 90%;
 }
 
@@ -218,7 +224,11 @@ footer{
     }
 
     #banner {
-        height: 250px;
+        height: 200px;
+    }
+
+    #pf {
+        height: 170px;
     }
 
     #shortcuts {
