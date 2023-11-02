@@ -51,8 +51,7 @@ nav{
     margin: auto;
     padding-top: 50px;
     padding-bottom: 200px;
-    max-width: 700px;
-    width: 60%;
+    width: 700px;
     background-color: rgb(20, 20, 20);
 }
 
@@ -93,7 +92,8 @@ nav{
     border-width:0;
     color:gray;
     background-color:gray;
-    width: 95%;
+    width: 94%;
+    margin-left: 3%;
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -123,27 +123,71 @@ nav{
     background-color: rgb(30, 30, 30);
     padding: 10px;
     border-radius: 10px;
-    width: 280px;
+    width: max-content;
     list-style-type: none;
 }
 
 #title {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 #titleDivider {
-    height:1px;
+    width: 100%;
+    height:1.5px;
     border-width:0;
-    color:gray;
-    background-color:gray;
-    margin-top: 15px;
+    color:rgb(220,220,220);
+    background-color:rgb(220,220,220);
+}
+/* 
+#Skills #titleDivider {
+    width: 85%;
 }
 
+#Features #titleDivider {
+    width: 68%;
+} */
+
 #titleLabel {
-    color: rgb(220,220,220);
+    float: left;
+    position: relative;
+    margin-top: -35px;
+    background-color: rgb(20, 20, 20);
+    padding-right: 5px;
+    color: rgb(106, 211, 224);
+    font-weight: 700;
     letter-spacing: 1px;
     font-size: 22px;
+}
+
+#Skills {
+    margin-top: 70px;
+    min-height: 240px;
+}
+
+#usedIcons {
+    color: rgb(255, 215, 95);
+}
+
+#pastIconTray {
+    position: relative;
+    float: left;
+    max-width: 370px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#currentIconTray {
+    position: relative;
+    float: right;
+    width: 250px;
+    background-color: rgb(30, 30, 30);
+    height: 120px;
+    padding: 10px 40px 0px 10px;
+    border-radius: 15px;
+}
+
+#currentIconTray .iconContainer{
+    background-color: rgb(25, 25, 25) !important;
 }
 
 .iconContainer {
@@ -187,22 +231,31 @@ nav{
     transition-duration: .5s;
 }
 
+#Features {
+    margin-top: 70px;
+}
+
 footer {
-    position: absolute;
-    left: 0px;
-    right: 0px;
+    position: relative;
+    width: 100%;
+    margin: auto;
     background-color: rgb(15,15,15);
-    padding: 5px 40px;
+    padding: 5px;
     color: rgb(220,220,220);
     font-size: 15px;
-    text-align: right;
+    text-align: left;
+    font-size: 12px;
 }
 
 #shortcuts {
     position: fixed;
+    z-index: 1;
     top: 60px;
     right: 0;
-    width: 20%;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    width: max-content;
+    background-color: rgba(15,15,15,.8);
     list-style-type: none;
 }
 
@@ -233,6 +286,14 @@ footer {
         height: 170px;
     }
 
+    #pastIconTray {
+        float: none;
+    }
+
+    #currentIconTray {
+        float: none;
+    }
+
     #shortcuts {
         display: none;
     }
@@ -241,7 +302,7 @@ footer {
         width: max-content;
     } */
 
-    #titleDivider {
-        width: 70%;
+    footer {
+        width: 100%;
     }
 }
