@@ -50,6 +50,7 @@ nav{
 #Home{
     margin: auto;
     padding-top: 50px;
+    padding-bottom: 200px;
     max-width: 700px;
     width: 60%;
     background-color: rgb(20, 20, 20);
@@ -84,7 +85,7 @@ nav{
 }
 
 #Introduction {
-    padding-top: 80px;
+    padding-top: 85px;
 }
 
 #divider {
@@ -132,34 +133,34 @@ nav{
 }
 
 #titleDivider {
-    float: right;
     height:1px;
     border-width:0;
     color:gray;
     background-color:gray;
     margin-top: 15px;
-    width: 83%;
-    margin-right: 2%
 }
 
 #titleLabel {
+    color: rgb(220,220,220);
     letter-spacing: 1px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .iconContainer {
-    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
     float: inline-start;
     height: 50px;
     width: 50px;
+    font-size: 13px;
     overflow: hidden;
     background-color: rgb(30,30,30);
     border-radius: 15px;
     transition: width .5s ease;
 }
 
-.iconContainer:hover {
-    width: 20%;
+.iconContainer:hover,  .skillIcons div.activeSkill{
+    width: 140px;
 }
 
 /* .iconContainer:hover img {
@@ -167,8 +168,10 @@ nav{
     transition-duration: .5s;
 } */
 
-#skillIcons {
-    padding: 10px;
+.skillIcons {
+    margin-top: 5px;
+    max-width: 450px;
+    height: 50px;
 }
 
 .iconContainer img {
@@ -178,17 +181,16 @@ nav{
 
 .iconContainer span {
     float: right;
-    padding: 17px 10px 5px 5px;
+    padding: 16px 12px 5px 0px;
     width: max-content;
     border-radius: 15px;
     transition-duration: .5s;
 }
 
-footer{
-    position: relative;
+footer {
+    position: absolute;
     left: 0px;
     right: 0px;
-    bottom: 0px;
     background-color: rgb(15,15,15);
     padding: 5px 40px;
     color: rgb(220,220,220);
@@ -233,5 +235,13 @@ footer{
 
     #shortcuts {
         display: none;
+    }
+
+    /* .skillIcons div.active, .skillIcons div:hover {
+        width: max-content;
+    } */
+
+    #titleDivider {
+        width: 70%;
     }
 }

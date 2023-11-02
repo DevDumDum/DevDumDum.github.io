@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maku Dev</title>
     <link rel="icon" type="image/png" href="assets/images/logo.png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
@@ -41,29 +42,33 @@
             </div>
 
             <div id="Skills">
-                <div id="title"><span id="titleLabel">SKILLS</span> <hr id="titleDivider"></div>
+                <div id="title" class="row"><span id="titleLabel" class="col-sm-2">SKILLS</span> <hr id="titleDivider" class="col-sm"></div>
 
                 <span>Languages and tools I've worked with:</span><br>
-                <div id="skillIcons">
+                <div class="skillIcons">
                     <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:html.svg"><span>HTML</span></div>
                     <div class="iconContainer"><img alt="css" src="https://api.iconify.design/skill-icons:css.svg"><span>CSS</span></div>
                     <div class="iconContainer"><img alt="javascript" src="https://api.iconify.design/skill-icons:javascript.svg"><span>JS</span></div>
                     <div class="iconContainer"><img alt="mysql" src="https://api.iconify.design/skill-icons:mysql-dark.svg"><span>MySQL</span></div>
                     <div class="iconContainer"><img alt="php" src="https://api.iconify.design/skill-icons:php-dark.svg"><span>PHP</span></div>
-
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <div class="skillIcons">
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:c.svg"><span>C language</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:cpp.svg"><span>CPP</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:python-dark.svg"><span>Python</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:react-dark.svg"><span>React Native</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:flutter-dark.svg"><span>Flutter</span></div>
+                </div>
+                <div class="skillIcons">
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:git.svg"><span>git</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:arduino.svg"><span>Arduino IDE</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:raspberrypi-dark.svg"><span>Raspberry Pi</span></div>
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/vscode-icons/file-type-vue.svg"><span>Vue.Js</span></div>
+                </div>
+            </div>
+            <br>
+            <div id="Features">
+                <div id="title" class="row"><span id="titleLabel" class="col-sm-4">Featured Projects</span> <hr id="titleDivider" class="col-sm"></div>
             </div>
         </div>
     </div>
@@ -72,18 +77,34 @@
     </footer>
 
     <script>
-        // Get the container element
         var btnContainer = document.getElementById("shortcuts");
-
-        // Get all buttons with class="btn" inside the container
         var btns = btnContainer.getElementsByClassName("btn");
-
-        // Loop through the buttons and add the active class to the current/clicked button
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function() {
                 var current = document.getElementsByClassName("active");
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
+            });
+        }
+
+        var iconContainer = document.getElementsByClassName("iconContainer");
+        for (var i = 0; i < iconContainer.length; i++) {
+            iconContainer[i].addEventListener("click", function() {
+                var currentSk = document.getElementsByClassName("activeSkill");
+                currentSk[0].className = currentSk[0].className.replace(" activeSkill", "");
+                this.className += " activeSkill";
+            });
+        }
+
+        for (var i = 0; i < iconContainer.length; i++) {
+            iconContainer[i].addEventListener("mouseover", function() {
+                var currentSK = document.getElementsByClassName("activeSkill");
+                currentSK[0].className = currentSK[0].className.replace(" activeSkill", "");
+                this.className += " activeSkill";
+            });
+            iconContainer[i].addEventListener("mouseout", function() {
+                var currentSK = document.getElementsByClassName("activeSkill");
+                this.className = this.className.replace(" activeSkill", "");
             });
         }
     </script>
