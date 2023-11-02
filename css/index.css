@@ -271,6 +271,72 @@ nav{
 
 #Features {
     margin-top: 70px;
+    min-height: 600px;
+}
+
+.projectRow {
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#folderContainer {
+    height: max-content;
+    min-height: 400px;
+}
+
+.projectContainer {
+    margin: 20px 20px 20px 0px;
+    cursor: pointer;
+    width: 130px;
+    float: inline-start;
+}
+
+.projectTitle {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: rgb(40,40,40);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.projectContainer:hover .projectPic{
+    transform: translateY(-40px) translateX(10px);
+}
+
+.projectContainer:hover .folderClose{
+    transform: translateX(20px) skewX(-15deg);
+}
+
+.projectPic {
+    width: 120px;
+    height: 90px;
+    transition: .2s linear;
+}
+
+.folderContent {
+    height: 100px;
+    width: 130px;
+    padding: 5px;
+    background-color: rgb(40,40,40);
+}
+
+.folderClose {
+    position: absolute;
+    z-index: 2;
+    float: left;
+    height: 100px;
+    width: 130px;
+    transform: translateX(7px) skewX(-5deg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: gray;
+    transition: .2s linear;
+}
+
+#Contact {
+    margin-top: 50px;
 }
 
 footer {
@@ -330,6 +396,10 @@ footer {
 
     #currentIconTray {
         float: none;
+    }
+
+    .projectContainer {
+        margin-left: 0;
     }
 
     #shortcuts {
