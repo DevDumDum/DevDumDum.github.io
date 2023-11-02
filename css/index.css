@@ -1,119 +1,227 @@
-#picContainter{
-    position:absolute;
-    left: 15%;
-    bottom: 0;
-    height: 95%;
-    padding: 40px 50px 0px 50px;
-    overflow: hidden;
-}
-#picHead{
-    margin-bottom: -5px;
-    height: 100%;
-    animation: picHead 2s linear;
+html {
+scroll-behavior: smooth;
 }
 
-@keyframes picHead {
-    0%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-#links{
-    position: absolute;
-    z-index: 2;
-    animation: linkAnimation 1.5s linear;
-}
-
-@keyframes linkAnimation {
-    0%{left: -100px;}
-    90%{left: -100px;}
-    100%{left: 0px;}
-}
-
-#links img{
-    margin-top: 35px;
-    margin-left: 25px;
-    height: 65px;
-    width: 65px;
-}
-
-#links img:hover{
-    margin-top: 20px;
-    height: 80px;
-    width: 80px;
-}
-
-#intro{
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    padding: 20px 30px;
-    bottom: 20px;
-    background-color: rgba(13,17,23,.9);
-    animation: alternate 1.5s show;
+body{
+    background-color: rgb(15, 15, 15);
+    font-family: sans-serif;
     color: rgb(220,220,220);
-    cursor:default;
-}
-@keyframes show {
-    0% {margin-right: -500px;}
-    50% {margin-right: -500px;}
-    100% {margin-right: 0px;}
-}
-h1{
-    font-family: cursive;
-    font-size: 35px;
-    cursor:default;
 }
 
-#promoteContainer{
+nav{
+    position: fixed;
+    color: rgb(220,220,220);
+    top: 0;
+    z-index: 10;
+    background-color: rgb(15,15,15);
     width: 100%;
-    height: inherit;
-    padding-bottom: 50px;
-    background-color: rgb(13,17,23);
+    height: 60px;
 }
 
-hr{
-    margin-left: 10%;
-    width: 80%;
+#logoContainer{
+    margin: 15px 0px 10px -40px;
+    position: absolute;
+    height: 40px; 
+    left: 50%;
+    display: block;
+    
+}
+
+#logoContainer a{
+    text-decoration: none;
+    color: rgb(192, 47, 47);
+    font-weight: 600;
+}
+
+#logo{
+    height: 30px;
+    width: 35px;
+}
+
+/* @media screen and (max-width: 690px) {
+    #logoContainer{
+        position: absolute;
+        left: 50%;
+        margin-left: -20px !important;
+        display: block;
+    }
+} */
+
+#Home{
+    margin: auto;
+    padding-top: 50px;
+    max-width: 700px;
+    width: 60%;
+    background-color: rgb(20, 20, 20);
+}
+
+#banner {
+    background-image: url("https://w.wallhaven.cc/full/p2/wallhaven-p2gp33.jpg");
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#pf {
+    max-height: 200px;
+    height: 70%;
+    border-radius: 100%;
+    margin-top: 150px;
+}
+
+#content {
+    margin: auto;
+    width: 90%;
+}
+
+#Introduction {
+    padding-top: 80px;
+}
+
+#divider {
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+    width: 95%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#info {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#nameLabel {
+    letter-spacing: 1px;
+}
+
+#name {
+    letter-spacing: 1px;
+    color: rgb(255, 215, 95);
+    font-size: 40px;
+}
+
+#info {
+    font-size: 12px;
+    letter-spacing: .7px;
+}
+
+#interest {
+    font-size: 13px;
+    background-color: rgb(30, 30, 30);
+    padding: 10px;
+    border-radius: 10px;
+    width: 280px;
+    list-style-type: none;
+}
+
+#title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#titleDivider {
+    float: right;
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+    margin-top: 15px;
+    width: 83%;
+    margin-right: 2%
+}
+
+#titleLabel {
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.iconContainer {
+    margin-right: 5px;
+    float: inline-start;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    background-color: rgb(30,30,30);
+    border-radius: 15px;
+    transition: width .5s ease;
+}
+
+.iconContainer:hover {
+    width: 20%;
+}
+
+/* .iconContainer:hover img {
+    float: right;
+    transition-duration: .5s;
+} */
+
+#skillIcons {
+    padding: 10px;
+}
+
+.iconContainer img {
+    height: 50px;
+    transition-duration: .5s;
+}
+
+.iconContainer span {
+    float: right;
+    padding: 17px 10px 5px 5px;
+    width: max-content;
+    border-radius: 15px;
+    transition-duration: .5s;
+}
+
+footer{
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(15,15,15);
+    padding: 5px 40px;
+    color: rgb(220,220,220);
+    font-size: 15px;
+    text-align: right;
+}
+
+#shortcuts {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 20%;
+    list-style-type: none;
+}
+
+#shortcuts li {
     margin-bottom: 20px;
 }
 
-#quote{
-    background-color: rgba(13,17,23,.9);
-    max-width: 400px;
-    text-align: left;
-}
-#qt{
-    color: rgb(100,100,100);
+#shortcuts a {
+    text-decoration: none;
+    color: rgb(200,200,200);
 }
 
-.d-block{
-    width:100%;
-    height: 100%;
+#shortcuts a.active {
+    color: rgb(255, 215, 95);
 }
 
-
-@media screen and (max-width: 1100px){
-    #intro{
-        left: 0px;
+@media screen and (max-width: 700px){
+    #Home {
         width: 100%;
+        margin-left: 0;
     }
 
-    #homeSlide{
-        margin-top: 0px;
-        margin-right: 0px;
-        position: relative;
-        float: none;
+    #banner {
+        height: 300px;
     }
-    #demo{
-        margin-right: 0px !important;
-    }
-}
 
-@media screen and (max-width: 690px) {
-    #picContainter{
-        height: 90%;
-        left: 5%;
-        padding: 0;
+    #shortcuts {
+        display: none;
     }
 }

@@ -2,103 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MakuDev</title>
-    <link rel="icon" type="image/png" href="images/logo/logo.png"/>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <script src="css/bootstrap.bundle.min.js"></script>
-    <link href="css/general.css" rel="stylesheet">
-    <link href="css/nav.css" rel="stylesheet">
+    <title>Maku Dev</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png"/>
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
     <header>        
         <nav id="MyNav" class="navbar-expand-sm navbar-dark">
             <div id="logoContainer">
-                <a href="javascript:void(0)">
-                    <img id="logo" src="images/logo/logo.png">
-                    <span id="lname">&nbspA K U&nbsp;&nbsp;&nbsp;D E V&nbsp;</span>
+                <a href="#Home">
+                    <img id="logo" src="assets/images/logo.png" alt="logo">
+                    <span id="lname">AKU</span>
                 </a>
-            </div>
-            <div class="container-fluid" align="right">
-                <button id="tButton" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul id="navOptions" class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="javascript:void(0)">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
-    <div id="bg">
-        <div id="content">
-            <div id="picContainter">
-                <img src="images/head2.png" id="picHead">
-            </div>
-            <div id="links">
-                <a href="https://www.linkedin.com/in/mark-allen-cabutaje-3a99291b6/" target="_blank"><img src="images/logo/in.png"></a><br>
-                <a href="https://www.github.com/MakuAren" target="_blank"><img src="images/logo/git.png"></a><br>
-                <a href="https://www.facebook.com/markallen.cabutaje/" target="_blank"><img src="images/logo/fb.png"></a>
-            </div>
-            <div id="intro" align="center">
-                <div style="width: 360px; text-align: center;">
-                    <h1>I'm</h1>
-                    <h1>Mark Allen Cabutaje</h1>
-                    <span style="color: rgb(192, 47, 47);">Developer</span>
-                </div>
-            </div>
+    <ul id="shortcuts">
+        <li><a href="#Introduction" class="btn active">Introduction</a></li>
+        <li><a href="#Skills" class="btn">Skills</a></li>
+        <li><a href="#Features" class="btn">Featured Projects</a></li>
+    </ul>
+    <div id="Home">
+        <div id="banner">
+            <img id="pf" alt="me" src="assets/images/pf.png">
         </div>
-        <div class="container-fluid" id="promoteContainer">
-            <div class="row">
-                <div class="col-md-12">
-                    <br><hr><br>
-                </div>
-            </div>
-            <div class="row" align="center">
-                <div class="col-md-6 p-5">
-                    <div id="quote">
-                        <h1 id="qt">
-                            "I <span style="color: rgb(192, 47, 47);">build</span>  and
-                            <div align="right">make <span style="color: royalblue;">fun</span> stuff"</div>
-                        </h1>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="height: 350px; margin-right: 50px;">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="height: 100%;">
-                                <a href="project.html">
-                                    <img src="images/1.jpg" alt="C project" class="d-block">
-                                </a>
-                            </div>
-                            <div class="carousel-item" style="height: 100%;">
-                                <a href="project.html">
-                                    <img src="images/2.jpg" alt="Java Project" class="d-block">
-                                </a>
-                            </div>
-                            <div class="carousel-item" style="height: 100%;">
-                                <a href="project.html">
-                                    <img src="images/3.jpg" alt="Arduino Project" class="d-block">
-                                </a>
-                            </div>
-                        </div>
+        <div id="content">
+            <div id="Introduction">
+                <span id="nameLabel">NAME</span> <br>
+                <span id="name"><b>Mark Allen</b></span>
+                <hr id="divider">
+                <p id="info">An aspiring software developer with a Degree in Bachelor of Science in Computer Science at the Technological University of the Philippines Manila.</p>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"></button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"></button>
-                    </div>
+                <ul id="interest">
+                    <li>🌱 I’m currently learning flutter</li>
+                    <li>🔭 I’m currently working on a mini mobile game</li>
+                    <li>⚡ Fun fact: I also love cycling 👀</li>
+                </ul>
+            </div>
+
+            <div id="Skills">
+                <div id="title"><span id="titleLabel">SKILLS</span> <hr id="titleDivider"></div>
+
+                <span>Languages and tools I've worked with:</span><br>
+                <div id="skillIcons">
+                    <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:html.svg"><span>HTML</span></div>
+                    <div class="iconContainer"><img alt="css" src="https://api.iconify.design/skill-icons:css.svg"><span>CSS</span></div>
+                    <div class="iconContainer"><img alt="javascript" src="https://api.iconify.design/skill-icons:javascript.svg"><span>JS</span></div>
+                    <div class="iconContainer"><img alt="mysql" src="https://api.iconify.design/skill-icons:mysql-dark.svg"><span>MySQL</span></div>
+                    <div class="iconContainer"><img alt="php" src="https://api.iconify.design/skill-icons:php-dark.svg"><span>PHP</span></div>
+
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
     </div>
     <footer class="footer">
-        &copy; Copyright 2021 MakuDev
+        &copy; Copyright 2023 MakuDev
     </footer>
+
+    <script>
+        // Get the container element
+        var btnContainer = document.getElementById("shortcuts");
+
+        // Get all buttons with class="btn" inside the container
+        var btns = btnContainer.getElementsByClassName("btn");
+
+        // Loop through the buttons and add the active class to the current/clicked button
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 </body>
 </html>
