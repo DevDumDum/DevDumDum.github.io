@@ -40,7 +40,8 @@ scroll-behavior: smooth;
 }
 
 body{
-    position: fixed;
+    overflow: hidden;
+    width: 100%;
     background-color: rgb(15, 15, 15);
     font-family: sans-serif;
     color: rgb(220,220,220);
@@ -123,6 +124,7 @@ nav{
 
 #Introduction, #Skills, #Features, #Contact {
     padding-top: 70px;
+    margin-bottom: 70px;
 }
 
 #Skills {
@@ -193,6 +195,12 @@ nav{
     width: 68%;
 } */
 
+#Features {
+    width: 100%;
+    max-height: 670px;
+    overflow-y: hidden;
+}
+
 #titleLabel {
     float: left;
     position: relative;
@@ -238,7 +246,7 @@ nav{
     float: inline-start;
     height: 50px;
     width: 50px;
-    font-size: 13px;
+    font-size: 12px;
     overflow: hidden;
     background-color: rgb(30,30,30);
     border-radius: 15px;
@@ -267,12 +275,85 @@ nav{
 
 .iconContainer span {
     float: right;
-    padding: 16px 12px 5px 0px;
+    padding: 16px 5px 5px 0px;
     width: max-content;
     border-radius: 15px;
     transition-duration: .5s;
 }
 
+#projectInfo {
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    width: 100%; /*300px*/
+    transition: .3s linear;
+}
+
+#projectDescriptionImg {
+    display: none;
+    width: 300px;
+}
+
+#mainDescriptionContent {
+    margin-top: 30px;
+    background-color: rgb(30,30,30);
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+#description {
+    position: relative;
+    float: right;
+    width: 0; /* 320px*/
+    height: 700px;
+    margin-bottom: 70px;
+    overflow: hidden;
+    transition: .3s linear;
+}
+
+#closeDescription {
+    position: absolute;
+    float: right;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#closeDescription button {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(15,15,15);
+    color: rgb(220,220,220);
+    border: none;
+}
+
+#pLinkRow {
+    display: flex;
+    justify-content: right;
+    margin: 40px 10px 0px 0px;
+}
+
+#projectLink {
+    font-size: 13px;
+    color: rgb(255, 215, 95);
+}
+
+#descriptionTitle {
+    display: flex;
+    justify-content: left;
+    padding-top: 10px;
+    margin: 15px 0px 10px 20px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: rgb(255, 215, 95);
+}
+
+#descriptionProject {
+    margin: 0px 15px 0px 15px;
+    text-align: justify;
+    font-size: 13px;
+}
 
 .projectRow {
     align-items: center;
@@ -291,23 +372,82 @@ nav{
     float: inline-start;
 }
 
+#vidContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+
+#vidLoading {
+    margin-top: 90px;
+    height: 60px;
+    animation: spin 1.5s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#vid {
+    display: none;
+    width: 100%;
+    height: 250px;
+}
+
 .projectTitle {
     padding: 10px;
     font-size: 15px;
     font-weight: 700;
+    color: rgb(220,220,220,);
     background-color: rgb(40,40,40);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
 }
 
-.projectContainer:hover .projectPic {
+.projectContainer:hover .projectPic, .activeFolder .projectPic{
     transform: translateY(-40px) translateX(10px);
 }
 
-.projectContainer:hover .folderClose {
+.projectContainer:hover .folderClose, .activeFolder .folderClose {
     transform: translateX(20px) skewX(-15deg);
-    background-color: rgba(255, 215, 95,0.9);
+}
+
+.activeFolder .projectTitle{
+    color: rgb(106, 211, 224);
+}
+
+.activeFolder .folderClose {
+    background-color: rgba(106, 211, 224,0.9);
+}
+
+.developing:hover .folderClose {
+    background-color: rgba(255, 215, 95,0.9) !important;
+}
+
+.done:hover .folderClose {
+    background-color: rgba(82, 214, 82, 0.9) !important;
+}
+
+.projectContainer:hover .folderStatusContainer, .activeFolder .folderStatusContainer{
+    opacity: 1;
+}
+
+.done:hover {
+    color: rgb(82, 214, 82) !important;
+}
+
+.developing:hover {
+    color: rgb(255, 215, 95) !important;
 }
 
 .projectPic {
@@ -315,6 +455,57 @@ nav{
     height: 90px;
     transition: .2s linear;
 }
+
+#msgLogo {
+    margin-top: 15px;
+    height: 60px;
+    animation: mail 5s;
+}
+
+#mailLogo {
+    height: 90px;
+    filter: invert(1);
+    animation: mail 5s reverse;
+}
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: mailFlip 3s infinite;
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  @keyframes mailFlip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+  }
 
 .folderContent {
     height: 100px;
@@ -334,6 +525,19 @@ nav{
     border-top-right-radius: 10px;
     background-color: rgba(150,150,150, 0.90);
     transition: .2s linear;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+}
+
+.folderStatusContainer {
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.folderStatus b{
+    font-size: 18px;
+    font-weight: bold;
 }
 
 footer {
@@ -386,17 +590,26 @@ footer {
     #pf {
         height: 170px;
     }
+    
+    #Introduction, #Skills, #Features, #Contact {
+        margin-bottom: 0;
+    }
 
-    #pastIconTray {
+    #pastIconTray, #currentIconTray, #projectList, #description {
         float: none;
     }
 
-    #currentIconTray {
-        float: none;
+    #projectList {
+        width: 100% !important;
+        max-width: max-content;
     }
 
     .projectContainer {
         margin-left: 0;
+    }
+
+    #description {
+        width: 100% !important;
     }
 
     #shortcuts {

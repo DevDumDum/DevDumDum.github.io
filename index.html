@@ -31,6 +31,15 @@
         <li><a href="#Skills" class="btn">Skills</a></li>
         <li><a href="#Features" class="btn">Featured Projects</a></li>
     </ul>
+    <!-- <div id="pop">
+        <div id="popBgClose" onclick="closePop()"></div>
+        <div id="popContent">
+            <div id="closeRow">
+                <button type="button" name="closePop" onclick="closePop()">X</button>
+            </div>
+        </div>
+    </div> -->
+
     <div id="Home">
         <div id="banner"></div>
         <div id="avatar"><img id="pf" alt="me" src="assets/images/pf.png"></div>
@@ -68,6 +77,7 @@
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:flutter-dark.svg"><span>Flutter</span></div>
                     </div>
                     <div class="skillIcons">
+                        <div class="iconContainer"><img alt="html" src="https://www.codeigniter.com/assets/icons/ci-logo.png"><span>Ci3 Framework</span></div>
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:git.svg"><span>git</span></div>
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:arduino.svg"><span>Arduino IDE</span></div>
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:raspberrypi-dark.svg"><span>Raspberry Pi</span></div>
@@ -86,61 +96,103 @@
 
             <div id="Features">
                 <div id="title"><hr id="titleDivider"><span id="titleLabel">Featured Projects</span></div>
+                    <div id="projectInfo">
+                        
+                        <div id="projectList">
+                            <div class="slider">
+                                <!-- <a href="javascript:void(0);" class="next control">Next</a>
+                                <a href="javascript:void(0);" class="prev control">Prev</a> -->
+                                <ul id="slides">
+                                    <li><img alt="Hide&Seek" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg"></li>
+                                    <li><img alt="MemoryGame" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png"></li>
+                                    <li><img alt="FlutterPortfolio" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg"></li>
+                                    <li><img alt="ASL_CNN" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/1.jpg"></li>
+                                    <li><img alt="DumDumCard" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg"></li>
+                                </ul>
+                                <img id="projectDescriptionImg" alt="projectPicture" src="">
+                            </div>
 
-                    <div class="slider">
-                        <!-- <a href="javascript:void(0);" class="next control">Next</a>
-                        <a href="javascript:void(0);" class="prev control">Prev</a> -->
-                        <ul>
-                            <li><img alt="hide&seek" class="slidePic" src="https://raw.githubusercontent.com/MakuAren/Hide-Seek/master/assets/resources/1.jpg"></li>
-                            <li><img alt="hide&seek" class="slidePic" src="https://raw.githubusercontent.com/MakuAren/MemoryGame/master/assets/resource/2.png"></li>
-                            <li><img alt="hide&seek" class="slidePic" src="https://raw.githubusercontent.com/MakuAren/Hide-Seek/master/assets/resources/1.jpg"></li>
-                            <li><img alt="hide&seek" class="slidePic" src="https://raw.githubusercontent.com/MakuAren/MemoryGame/master/assets/resource/2.png"></li>
-                        </ul>
+                            <div id="folderContainer">
+                                <div class="projectContainer done" id='0' onclick="openPop(0)">
+                                    <span class="projectTitle">Hide - Seek</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="Hide&Seek" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg">
+                                    </div>
+                                </div>
+        
+                                <div class="projectContainer done" id="1" onclick="openPop(1)">
+                                    <span class="projectTitle">Memory Game</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="MemoryGame" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png">
+                                    </div>
+                                </div>
+        
+                                <div class="projectContainer done" id="2" onclick="openPop(2)">
+                                    <span class="projectTitle">Flutter Porfolio</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="FlutterPortfolio" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg">
+                                    </div>
+                                </div>
+        
+                                <div class="projectContainer done" id="3" onclick="openPop(3)">
+                                    <span class="projectTitle">ASL CNN</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="ASL_CNN" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/2.jpg">
+                                    </div>
+                                </div>
+        
+                                <div class="projectContainer developing" id="4" onclick="openPop(4)">
+                                    <span class="projectTitle">DumDumCard</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Forging~</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="DumDumCard" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
 
-
-                        <div class="slider_option">
-                            <Button class="btn">Autoplay</Button>
+                        <div id="description">
+                            <div id="mainDescriptionContent">
+                                <div id="closeDescription"><button type="button" onclick="closePop()">X</button></div>
+                                <div id="descriptionTitle">Hi</div>
+                                <div id="vidContainer">
+                                    <img id='vidLoading' src="assets/images/logo.png" alt="logo">
+                                <iframe id="vid" src="" onload="vidLoaded()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div id="descriptionProject"></div>
+                                <div id="pLinkRow">
+                                    <a id="projectLink" class='btn active' target="_blank" href="">Go to Project</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <br>
-                    <div id="folderContainer">
-                        <div class="projectContainer" id='0'>
-                            <span class="projectTitle">Hide - Seek</span>
-                            <div class="folderClose"></div>
-                            <div class="folderContent">
-                                <img alt="hide&seek" class="projectPic" src="https://raw.githubusercontent.com/MakuAren/Hide-Seek/master/assets/resources/1.jpg">
-                            </div>
-                        </div>
-
-                        <div class="projectContainer" id="1">
-                            <span class="projectTitle">Memory Game</span>
-                            <div class="folderClose"></div>
-                            <div class="folderContent">
-                                <img alt="hide&seek" class="projectPic" src="https://raw.githubusercontent.com/MakuAren/MemoryGame/master/assets/resource/2.png">
-                            </div>
-                        </div>
-
-                        <div class="projectContainer">
-                            <span class="projectTitle" id="2">Hide - Seek</span>
-                            <div class="folderClose"></div>
-                            <div class="folderContent">
-                                <img alt="hide&seek" class="projectPic" src="https://raw.githubusercontent.com/MakuAren/Hide-Seek/master/assets/resources/1.jpg">
-                            </div>
-                        </div>
-
-                        <div class="projectContainer">
-                            <span class="projectTitle" id="3">Memory Game</span>
-                            <div class="folderClose"></div>
-                            <div class="folderContent">
-                                <img alt="hide&seek" class="projectPic" src="https://raw.githubusercontent.com/MakuAren/MemoryGame/master/assets/resource/2.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
 
                 <div id="Contact">
                     <div id="title"><hr id="titleDivider"><span id="titleLabel">Contact Me</span></div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img id='msgLogo' src="assets/images/logo.png" alt="logo">
+                            </div>
+                            <div class="flip-card-back">
+                                <img id="mailLogo" src="https://api.iconify.design/line-md/email.svg" alt="mailLogo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -150,15 +202,115 @@
     </footer>
 
     <script>
+        var projects = [
+            ['Hide-Seek','             The ‘Hide and Seek’ is a survival horror game. It focuses on the survival of the character throughout the game. Its also objective is attempting to scare the player using scary ambience and graphics. In addition, this game is controlled by a single-player, which means that the game is designed to be played by a one person at a time.','https://github.com/DevDumDum/Hide-Seek',[5],'https://www.youtube.com/embed/s9yl6I6REHw',
+            ['https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/2.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/3.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/4.jpg']],
+            
+            ['MemoryGame','             A simple card flipping game where players search for the correct paired card by flipping one at a time. Players compete for the time and numbers of moves in completing the game.','https://github.com/DevDumDum/MemoryGame',[13,1,2],'https://www.youtube.com/embed/OhcTVYQ9g9w',
+            ['https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png','https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/3.png','https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/5.png']],
+            
+            ['FlutterPorfolio','             This is my Portfolio created in Flutter. This is a product of 40 hours worth of studying and development. This is my Portfolio created in Flutter.','https://github.com/DevDumDum/FlutterPortfolio',[7],'https://www.youtube.com/embed/Hg2qo1HY_0Y',
+            ['https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg']],
+
+            ['ASL using CNN','             A project that uses a convolutional neural network for recognizing American Sign Language Alphabet. The system utilizes a web camera that detects the hand of the person which will then classify the handsign being used. The dataset used is from an open-source website while the model and the classification method (python program) are personally made.The documentation is uploaded on my GitHub and ResearchGate.','https://github.com/DevDumDum/ASL_CNN',[7],'',
+            ['https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/1.jpg','https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/2.jpg']],
+
+            ['DumDumCard','             DumDum Card Game is a mobile game developed in Flutter. This mini project is dedicated for me to fully learn and understand Flutter.','https://github.com/DevDumDum/DumDumCardGame',[7],'https://drive.google.com/file/d/1tgBWUbkVrYhjz4g66BcxhmMnKyH7huI1/preview',
+            ['https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg']],
+
+        ];
+
+
         window.addEventListener("load", event => {
             var image = document.querySelector('img');
             var isLoaded = image.complete && image.naturalHeight !== 0;
             document.getElementById('loading').style.opacity = 0;
-            document.getElementById('body').style.position = 'relative';
+            document.getElementById('body').style.overflowY = 'scroll';
+            setTimeout(moveRight, 3000);
             setTimeout(function(){
                 document.getElementById('loading').style.display = 'none';
             }, 500);
         });
+
+        //============= slider ===============
+        var counter = 0;
+        var slideStatus = true;
+        var projectClicked = false;
+
+
+        var slideCount =  $(".slider ul li").length;
+        var slideWidth =  $(".slider ul li").width();
+        var slideHeight =  $(".slider ul li").height();
+        var slideUlWidth =  slideCount * slideWidth;
+        
+        $(".slider").css({"max-width":slideWidth, "height": slideHeight});
+        $(".slider ul").css({"width":slideUlWidth, "margin-left": - slideWidth });
+        $(".slider ul li:last-child").prependTo($(".slider ul"));
+        document.getElementById(counter).style.color = 'rgb(82, 214, 82)';
+
+        function moveLeft() {
+            $(".slider ul").stop().animate({
+                left: + slideWidth
+            },700, function() {
+                $(".slider ul li:last-child").prependTo($(".slider ul"));
+                $(".slider ul").css("left","");
+            });
+        }
+        
+        function moveRight() {
+            $(".slider ul").stop().animate({
+                left: - slideWidth
+            },700, function() {
+                $(".slider ul li:first-child").appendTo($(".slider ul"));
+                $(".slider ul").css("left","");
+            });
+
+            if(counter < slideCount-1){
+                counter++;
+            } else {
+                counter = 0;
+            }
+            
+            if(slideStatus){
+                if(counter-1 >= 0){
+                    document.getElementById(counter-1).style.color = 'rgb(220,220,220)';
+                } else {
+                    document.getElementById(slideCount-1).style.color = 'rgb(220,220,220)';
+                }
+
+                if(slideCount-1 == counter){
+                    document.getElementById(counter).style.color = 'rgb(255, 215, 95)';
+                } else {
+                    document.getElementById(counter).style.color = 'rgb(82, 214, 82)';
+                }
+            } else {
+                document.getElementById(counter).style.color = 'rgb(220,220,220)';
+            }
+            widthCheck();
+            setTimeout(moveRight, 3000);
+        }
+        
+        
+        $(".next").on("click",function(){
+        moveRight();
+        });
+        
+        $(".prev").on("click",function(){
+        moveLeft();
+        });
+
+        function widthCheck() {
+            if(document.getElementById('description').style.width == "310px" || document.getElementById('description').style.width == "100%"){
+                if(window.innerWidth > 700){
+                    document.getElementById('projectInfo').style.width = '300px';
+                    document.getElementById('description').style.width = '310px';
+                } else {
+                    document.getElementById('projectInfo').style.width = '100%';
+                    document.getElementById('description').style.width = '100%';
+                }
+            }
+        }
+
 
         var btnContainer = document.getElementById("shortcuts");
         var btns = btnContainer.getElementsByClassName("btn");
@@ -168,7 +320,7 @@
                 current[0].className = current[0].className.replace(" active", "");
                 this.className += " active";
             });
-        }
+        };
 
         var iconContainer = document.getElementsByClassName("iconContainer");
         for (var i = 0; i < iconContainer.length; i++) {
@@ -177,7 +329,7 @@
                 currentSk[0].className = currentSk[0].className.replace(" activeSkill", "");
                 this.className += " activeSkill";
             });
-        }
+        };
 
         for (var i = 0; i < iconContainer.length; i++) {
             iconContainer[i].addEventListener("mouseover", function() {
@@ -189,7 +341,80 @@
                 var currentSK = document.getElementsByClassName("activeSkill");
                 this.className = this.className.replace(" activeSkill", "");
             });
+        };
+
+        function vidLoaded(){
+            document.getElementById('vidLoading').style.display = 'none';
+            document.getElementById('vid').style.display = 'block';
         }
+
+        function closePop(){
+            slideStatus = true;
+            for(var i = 0; i < projects.length; i++){
+                document.getElementById(i).classList.remove("activeFolder");
+            }
+            document.getElementById('projectDescriptionImg').style.display = 'none';
+            document.getElementById('slides').style.display = 'block';
+
+            document.getElementById('projectInfo').style.width = '100%';
+            document.getElementById('description').style.width = '0px';
+            document.getElementById('Features').style.maxHeight = '670px';
+            document.getElementById('Features').scrollIntoView();
+        };
+
+        function scrollToDescription(){
+            alert("done");
+            document.getElementById('description').scrollIntoView()
+        }
+
+        function scrollMobile(){
+            setTimeout(scrollToDescription, 500);
+        };
+
+        function openPop(id){
+            if(document.getElementById(id).classList.length == 3){
+                closePop();
+                return;
+            }
+
+            for(var i = 0; i < projects.length; i++){
+                document.getElementById(i).classList.remove("activeFolder");
+            }
+            document.getElementById(id).classList.add("activeFolder");
+            if(projects[id][4] != ''){
+                document.getElementById('vidContainer').style.display = 'flex';
+                document.getElementById('vidLoading').style.display = 'block';
+                document.getElementById('vid').style.display = 'none';
+                document.getElementById('vid').src = projects[id][4];
+
+            } else {
+                document.getElementById('vidContainer').style.display = 'none';
+                document.getElementById('vidLoading').style.display = 'none';
+                document.getElementById('vid').style.display = 'none';
+                document.getElementById('vid').src = '';
+            }
+
+            slideStatus = false;
+            document.getElementById('projectDescriptionImg').src = projects[id][5][0];
+            document.getElementById('projectDescriptionImg').style.display = 'block';
+            document.getElementById('slides').style.display = 'none';
+
+            if(window.innerWidth > 700){
+                document.getElementById('projectInfo').style.width = '300px';
+                document.getElementById('description').style.width = '310px';
+                document.getElementById('Features').scrollIntoView();
+            } else {
+                document.getElementById('projectInfo').style.width = '100%';
+                document.getElementById('description').style.width = '100%';
+                scrollMobile();
+            }
+            document.getElementById('Features').style.maxHeight = 'none';
+            
+            document.getElementById('descriptionTitle').innerHTML = projects[id][0];
+            document.getElementById('descriptionProject').innerHTML = projects[id][1];
+            document.getElementById('projectLink').href = projects[id][2];
+        };
+
     </script>
     <script src="js/slide.js"></script>
 </body>
