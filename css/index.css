@@ -124,7 +124,7 @@ nav{
 
 #Introduction, #Skills, #Features, #Contact {
     padding-top: 70px;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 }
 
 #Skills {
@@ -301,11 +301,9 @@ nav{
 }
 
 #description {
-    padding-top: 50px;
     position: relative;
     float: right;
     width: 0; /* 320px*/
-    height: 700px;
     margin-bottom: 70px;
     overflow: hidden;
     transition: .3s linear;
@@ -366,7 +364,7 @@ nav{
 }
 
 .projectContainer {
-    margin: 20px 20px 20px 0px;
+    margin: 20px 15px 20px 0px;
     cursor: pointer;
     width: 130px;
     display: inline-block;
@@ -456,6 +454,19 @@ nav{
     transition: .2s linear;
 }
 
+#contactContainer {
+    padding: 60px 20px 70px 20px;
+    border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(15,15,15);
+}
+
+#contactLogo {
+    width: 100%;
+    height: 90px;
+}
+
 #msgLogo {
     margin-top: 15px;
     height: 60px;
@@ -472,9 +483,9 @@ nav{
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
-  }
+}
 
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -482,20 +493,20 @@ nav{
     transition: transform 0.8s;
     transform-style: preserve-3d;
     animation: mailFlip 3s infinite;
-  }
+}
 
-  .flip-card-front, .flip-card-back {
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-  }
-  .flip-card-back {
+}
+.flip-card-back {
     transform: rotateY(180deg);
-  }
+}
 
-  @keyframes mailFlip {
+@keyframes mailFlip {
     0% {
         transform: rotateY(0deg);
     }
@@ -505,7 +516,73 @@ nav{
     100% {
         transform: rotateY(360deg);
     }
-  }
+}
+
+#contactInfo {
+    margin-top: 80px;
+    letter-spacing: 1px;
+}
+
+.contactLabel {
+    font-size: 10px;
+}
+
+#contactInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contactInfo ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#cpNum {
+    color: rgb(255, 215, 95);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#myEmail {
+    color: rgb(255, 215, 95);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#socRow {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+#contactOthers {
+    margin-top: 70px;
+    min-width: 350px;
+    background-color: rgb(30, 30, 30);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+#contactOthers ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#contactOthers ul li {
+    float: left;
+}
+
+#socialsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contactOthers ul li a img {
+    height: 50px;
+    padding-right: 20px;
+}
 
 .folderContent {
     height: 100px;
@@ -541,6 +618,8 @@ nav{
 }
 
 footer {
+    display: grid;
+    justify-content: end;
     position: relative;
     width: 100%;
     margin: auto;
@@ -562,6 +641,10 @@ footer {
     width: max-content;
     background-color: rgba(15,15,15,.8);
     list-style-type: none;
+}
+
+#shortcuts ul {
+    padding: 0;
 }
 
 #shortcuts li {
@@ -603,6 +686,10 @@ footer {
         float: none;
     }
 
+    #description {
+        padding-top: 30px;
+    }
+
     #projectList {
         width: 100% !important;
         max-width: max-content;
@@ -610,6 +697,14 @@ footer {
 
     .projectContainer {
         margin-left: 0;
+    }
+
+    #contactContainer {
+        width: 100%;
+    }
+
+    #contactOthers {
+        min-width: 0 !important;
     }
 
     #shortcuts {

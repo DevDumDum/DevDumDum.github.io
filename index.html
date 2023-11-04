@@ -30,6 +30,7 @@
         <li><a href="#Introduction" class="btn active">Introduction</a></li>
         <li><a href="#Skills" class="btn">Skills</a></li>
         <li><a href="#Features" class="btn">Featured Projects</a></li>
+        <li><a href="#Contact" class="btn">Contact Me</a></li>
     </ul>
     <!-- <div id="pop">
         <div id="popBgClose" onclick="closePop()"></div>
@@ -167,7 +168,7 @@
                                 <br>
                                 <div id="descriptionProject"></div>
                                 <div id="pLinkRow">
-                                    <a id="projectLink" class='btn active' target="_blank" href="">Go to Project</a>
+                                    <a id="projectLink" class='btn active' target="_blank" rel="noopener" href="">Go to Project</a>
                                 </div>
                             </div>
                         </div>
@@ -178,14 +179,38 @@
 
                 <div id="Contact">
                     <div id="title"><hr id="titleDivider"><span id="titleLabel">Contact Me</span></div>
-
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img id='msgLogo' src="assets/images/logo.png" alt="logo">
+                    <div id="contactContainer">
+                        <div id="contactLogo">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img id='msgLogo' src="assets/images/logo.png" alt="logo">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <img id="mailLogo" src="https://api.iconify.design/line-md/email.svg" alt="mailLogo">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <img id="mailLogo" src="https://api.iconify.design/line-md/email.svg" alt="mailLogo">
+                        </div>
+
+                        <div id="contactInfo">
+                            <ul>
+                                <li><span class="contactLabel">Cellphone Number:</span></li>
+                                <li><span id="cpNum">0916-xxx-xxxx</span></li>
+                                <li><span class="contactLabel">Email address:</span></li>
+                                <li><span id="myEmail">markxxxxxxxxxxxxx00@gmail.com</span></li>
+                            </ul>
+                        </div>
+                        <div id="socRow">
+                            <div id="contactOthers">
+                                <span>Other Socials:</span><br>
+                                <div id="socialsContainer">
+                                    <ul>
+                                        <li><a target="_blank" rel="noopener" href="https://github.com/DevDumDum/"><img alt="github" src="https://api.iconify.design/openmoji/github.svg"></a></li>
+                                        <li><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/mark-allen-cabutaje-3a99291b6"><img alt="linkedin" src="https://api.iconify.design/skill-icons/linkedin.svg"></a></li>
+                                        <li><a target="_blank" rel="noopener" href="https://www.youtube.com/@dumdumcoding"><img alt="youtube" src="https://api.iconify.design/openmoji/youtube.svg"></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -306,7 +331,7 @@
         function widthCheck() {
             if(document.getElementById('description').style.width == "310px" || document.getElementById('description').style.width == "100%"){
                 if(window.innerWidth > 700){
-                    document.getElementById('projectInfo').style.width = '300px';
+                    document.getElementById('projectInfo').style.width = '320px';
                     document.getElementById('description').style.width = '310px';
                 } else {
                     document.getElementById('projectInfo').style.width = '100%';
@@ -362,6 +387,7 @@
 
             document.getElementById('projectInfo').style.width = '100%';
             document.getElementById('description').style.width = '0px';
+            document.getElementById('description').style.height = '0px';
             document.getElementById('Features').scrollIntoView();
         };
 
@@ -398,15 +424,15 @@
             document.getElementById('slides').style.display = 'none';
 
             if(window.innerWidth > 700){
-                document.getElementById('projectInfo').style.width = '300px';
+                document.getElementById('projectInfo').style.width = '320px';
                 document.getElementById('description').style.width = '310px';
-                document.getElementById('description').style.marginRight = '0px';
                 document.getElementById('Features').scrollIntoView();
             } else {
                 document.getElementById('projectInfo').style.width = '100%';
                 document.getElementById('description').style.width = '100%';
                 setTimeout(scrollToDescription, 200);
             }
+            document.getElementById('description').style.height = 'max-content';
             document.getElementById('Features').style.maxHeight = 'none';
             
             document.getElementById('descriptionTitle').innerHTML = projects[id][0];
