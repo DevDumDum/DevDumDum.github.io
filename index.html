@@ -272,6 +272,10 @@
             }
             
             if(slideStatus){
+                for(var i=0; i < slideCount-1; i++){
+                    document.getElementById(i).style.color = 'rgb(220,220,220)';
+                }
+
                 if(counter-1 >= 0){
                     document.getElementById(counter-1).style.color = 'rgb(220,220,220)';
                 } else {
@@ -358,17 +362,12 @@
 
             document.getElementById('projectInfo').style.width = '100%';
             document.getElementById('description').style.width = '0px';
-            document.getElementById('Features').style.maxHeight = '650px';
             document.getElementById('Features').scrollIntoView();
         };
 
         function scrollToDescription(){
             document.getElementById('description').scrollIntoView()
         }
-
-        function scrollMobile(){
-            setTimeout(scrollToDescription, 500);
-        };
 
         function openPop(id){
             if(document.getElementById(id).classList.length == 3){
@@ -401,11 +400,12 @@
             if(window.innerWidth > 700){
                 document.getElementById('projectInfo').style.width = '300px';
                 document.getElementById('description').style.width = '310px';
+                document.getElementById('description').style.marginRight = '0px';
                 document.getElementById('Features').scrollIntoView();
             } else {
                 document.getElementById('projectInfo').style.width = '100%';
                 document.getElementById('description').style.width = '100%';
-                scrollMobile();
+                setTimeout(scrollToDescription, 200);
             }
             document.getElementById('Features').style.maxHeight = 'none';
             

@@ -197,7 +197,6 @@ nav{
 
 #Features {
     width: 100%;
-    max-height: 670px;
     overflow: hidden;
 }
 
@@ -370,7 +369,7 @@ nav{
     margin: 20px 20px 20px 0px;
     cursor: pointer;
     width: 130px;
-    float: inline-start;
+    display: inline-block;
 }
 
 #vidContainer {
@@ -611,10 +610,6 @@ footer {
 
     .projectContainer {
         margin-left: 0;
-    }
-
-    #description {
-        width: 100% !important;
     }
 
     #shortcuts {
