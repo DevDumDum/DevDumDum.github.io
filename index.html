@@ -24,6 +24,7 @@
                     <span id="lname">AKU</span>
                 </a>
             </div>
+            <button id="burger" class="" onclick="showMenu()">+</button>
         </nav>
     </header>
     <ul id="shortcuts">
@@ -41,7 +42,7 @@
         </div>
     </div> -->
 
-    <div id="Home">
+    <div id="Home" onclick="closeMenu()">
         <div id="banner"></div>
         <div id="avatar"><img id="pf" alt="me" src="assets/images/pf.png"></div>
         <div id="content">
@@ -159,7 +160,7 @@
 
                         <div id="description">
                             <div id="mainDescriptionContent">
-                                <div id="closeDescription"><button type="button" onclick="closePop()">X</button></div>
+                                <div id="closeDescription"><button id="closeDescBtn" type="button" onclick="closePop()">X</button></div>
                                 <div id="descriptionTitle">Hi</div>
                                 <div id="vidContainer">
                                     <img id='vidLoading' src="assets/images/logo.png" alt="logo">
@@ -198,7 +199,10 @@
                                 <li><span class="contactLabel">Cellphone Number:</span></li>
                                 <li><span id="cpNum">0916-xxx-xxxx</span></li>
                                 <li><span class="contactLabel">Email address:</span></li>
-                                <li><span id="myEmail">markxxxxxxxxxxxxx00@gmail.com</span></li>
+                                <li class="tooltip">
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                    <span id="myEmail" onclick="copyEmail(this.innerHTML)" onmouseout="toolTipOut()">markallencabutaje00@gmail.com</span>
+                                </li>
                             </ul>
                         </div>
                         <div id="socRow">
@@ -227,24 +231,34 @@
     </footer>
 
     <script>
+        var projectIcons = [
+            ['C language', 'https://api.iconify.design/skill-icons:c.svg'],
+            ['Vue.js','https://api.iconify.design/vscode-icons/file-type-vue.svg'],
+            ['CSS','https://api.iconify.design/skill-icons:css.svg'],
+            ['JavaScript','https://api.iconify.design/skill-icons:javascript.svg'],
+            ['Flutter','https://api.iconify.design/skill-icons:flutter-dark.svg'],
+            ['Python','"https://api.iconify.design/skill-icons:python-dark.svg"'],
+        ];
+
         var projects = [
-            ['Hide-Seek','             The ‘Hide and Seek’ is a survival horror game. It focuses on the survival of the character throughout the game. Its also objective is attempting to scare the player using scary ambience and graphics. In addition, this game is controlled by a single-player, which means that the game is designed to be played by a one person at a time.','https://github.com/DevDumDum/Hide-Seek',[5],'https://www.youtube.com/embed/s9yl6I6REHw',
-            ['https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/2.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/3.jpg','https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/4.jpg']],
+            ['Hide-Seek','             The ‘Hide and Seek’ is a survival horror game. It focuses on the survival of the character throughout the game. Its also objective is attempting to scare the player using scary ambience and graphics. In addition, this game is controlled by a single-player, which means that the game is designed to be played by a one person at a time.','https://github.com/DevDumDum/Hide-Seek',[0],'https://www.youtube.com/embed/s9yl6I6REHw',
+            ['https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg']],
             
-            ['MemoryGame','             A simple card flipping game where players search for the correct paired card by flipping one at a time. Players compete for the time and numbers of moves in completing the game.','https://github.com/DevDumDum/MemoryGame',[13,1,2],'https://www.youtube.com/embed/OhcTVYQ9g9w',
-            ['https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png','https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/3.png','https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/5.png']],
+            ['MemoryGame','             A simple card flipping game where players search for the correct paired card by flipping one at a time. Players compete for the time and numbers of moves in completing the game.','https://github.com/DevDumDum/MemoryGame',[1,2,3],'https://www.youtube.com/embed/OhcTVYQ9g9w',
+            ['https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png']],
             
-            ['FlutterPorfolio','             This is my Portfolio created in Flutter. This is a product of 40 hours worth of studying and development. This is my Portfolio created in Flutter.','https://github.com/DevDumDum/FlutterPortfolio',[7],'https://www.youtube.com/embed/Hg2qo1HY_0Y',
+            ['FlutterPorfolio','             This is my Portfolio created in Flutter. This is a product of 40 hours worth of studying and development. This is my Portfolio created in Flutter.','https://github.com/DevDumDum/FlutterPortfolio',[4],'https://www.youtube.com/embed/Hg2qo1HY_0Y',
             ['https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg']],
 
-            ['ASL using CNN','             A project that uses a convolutional neural network for recognizing American Sign Language Alphabet. The system utilizes a web camera that detects the hand of the person which will then classify the handsign being used. The dataset used is from an open-source website while the model and the classification method (python program) are personally made.The documentation is uploaded on my GitHub and ResearchGate.','https://github.com/DevDumDum/ASL_CNN',[7],'',
-            ['https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/1.jpg','https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/2.jpg']],
+            ['ASL using CNN','             A project that uses a convolutional neural network for recognizing American Sign Language Alphabet. The system utilizes a web camera that detects the hand of the person which will then classify the handsign being used. The dataset used is from an open-source website while the model and the classification method (python program) are personally made.The documentation is uploaded on my GitHub and ResearchGate.','https://github.com/DevDumDum/ASL_CNN',[5],'',
+            ['https://raw.githubusercontent.com/DevDumDum/ASL_CNN/master/assets/resources/1.jpg']],
 
-            ['DumDumCard','             DumDum Card Game is a mobile game developed in Flutter. This mini project is dedicated for me to fully learn and understand Flutter.','https://github.com/DevDumDum/DumDumCardGame',[7],'https://drive.google.com/file/d/1tgBWUbkVrYhjz4g66BcxhmMnKyH7huI1/preview',
+            ['DumDumCard','             DumDum Card Game is a mobile game developed in Flutter. This mini project is dedicated for me to fully learn and understand Flutter.','https://github.com/DevDumDum/DumDumCardGame',[4],'https://drive.google.com/file/d/1tgBWUbkVrYhjz4g66BcxhmMnKyH7huI1/preview',
             ['https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg']],
 
         ];
 
+        var currentDescriptionIcon = [];
 
         window.addEventListener("load", event => {
             var image = document.querySelector('img');
@@ -256,6 +270,18 @@
                 document.getElementById('loading').style.display = 'none';
             }, 500);
         });
+
+        function copyEmail(email){
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Email Copied!";
+            navigator.clipboard.writeText(email);
+        }
+
+        function toolTipOut() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+
 
         //============= slider ===============
         var counter = 0;
@@ -340,6 +366,24 @@
             }
         }
 
+        function showMenu(){
+            var sh = document.getElementById('shortcuts');
+            if(sh.style.display == "block"){
+                closeMenu();
+                return;
+            }
+            sh.style.display = "block";
+            document.getElementById('burger').classList.add('activeMenu');
+            
+        }
+
+        function closeMenu(){
+            var sh = document.getElementById('shortcuts');
+            if(window.innerWidth <= 700 && sh.style.display == "block"){
+                document.getElementById('burger').classList.remove('activeMenu');
+                sh.style.display = 'none';
+            }
+        }
 
         var btnContainer = document.getElementById("shortcuts");
         var btns = btnContainer.getElementsByClassName("btn");

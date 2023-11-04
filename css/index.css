@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
     background-color: rgb(15,15,15);
-    z-index: 11;
+    z-index: 50;
     opacity: 1;
     transition: .5s linear;
 }
@@ -310,6 +310,7 @@ nav{
     transition: .3s linear;
 }
 
+
 #closeDescription {
     position: absolute;
     float: right;
@@ -321,8 +322,10 @@ nav{
 #closeDescription button {
     height: 50px;
     width: 50px;
-    background-color: rgb(15,15,15);
-    color: rgb(220,220,220);
+    font-size: 17px;
+    font-weight: 600;
+    background-color: rgb(167 138 48);
+    color: rgb(20, 20, 20);
     border: none;
 }
 
@@ -475,7 +478,7 @@ nav{
 }
 
 #mailLogo {
-    height: 90px;
+    height: 90px !important;
     filter: invert(1);
     animation: mail 5s reverse;
 }
@@ -544,10 +547,55 @@ nav{
     font-weight: 600;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip:hover #myEmail{
+    color: rgb(106, 211, 224);
+}
+
 #myEmail {
     color: rgb(255, 215, 95);
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 #socRow {
@@ -582,7 +630,14 @@ nav{
 
 #contactOthers ul li a img {
     height: 50px;
-    padding-right: 20px;
+    margin-right: 20px;
+    transition: .1s linear;
+}
+
+#contactOthers ul li a img:hover {
+    height: 70px;
+    margin-top: -20px;
+    margin-right: 20px;
 }
 
 .folderContent {
@@ -632,9 +687,26 @@ footer {
     font-size: 12px;
 }
 
+#burger {
+    display: none;
+    float: right;
+    height: 60px;
+    width: 60px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: rgb(220,220,220);
+    transition: .1s linear;
+}
+
+#burger:hover, .activeMenu {
+    transform: rotate(50deg);
+    color: rgb(255, 215, 95) !important;
+}
+
 #shortcuts {
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 60px;
     right: 0;
     padding: 10px;
@@ -642,6 +714,7 @@ footer {
     width: max-content;
     background-color: rgba(15,15,15,.8);
     list-style-type: none;
+    display: block;
 }
 
 #shortcuts ul {
@@ -657,8 +730,8 @@ footer {
     color: rgb(200,200,200);
 }
 
-#shortcuts a.active {
-    color: rgb(255, 215, 95);
+#shortcuts a.active, #shortcuts a:hover{
+    color: rgb(255, 215, 95) !important;
 }
 
 @media screen and (max-width: 700px){
@@ -688,7 +761,7 @@ footer {
     }
 
     #description {
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     #projectList {
@@ -706,6 +779,10 @@ footer {
 
     #contactOthers {
         min-width: 0 !important;
+    }
+    
+    #burger {
+        display: block;
     }
 
     #shortcuts {
