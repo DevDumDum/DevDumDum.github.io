@@ -206,7 +206,8 @@ nav{
     margin-top: -35px;
     background-color: rgb(20, 20, 20);
     padding-right: 5px;
-    color: rgb(106, 211, 224);
+    /* color: rgb(106, 211, 224); */
+    color: rgb(255, 215, 95);
     font-weight: 700;
     letter-spacing: 1px;
     font-size: 22px;
