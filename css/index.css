@@ -77,14 +77,9 @@ nav{
     width: 35px;
 }
 
-/* @media screen and (max-width: 690px) {
-    #logoContainer{
-        position: absolute;
-        left: 50%;
-        margin-left: -20px !important;
-        display: block;
-    }
-} */
+#Introduction, span, #descriptionProject{
+    cursor: default;
+}
 
 #Home{
     margin: auto;
@@ -96,12 +91,15 @@ nav{
 
 #banner {
     background-image: url("https://w.wallhaven.cc/full/p2/wallhaven-p2gp33.jpg");
-    height: 250px;
-    width: 100%;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-color: rgb(15,15,15); 
+    height: 250px;
+    width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 #avatar {
@@ -146,10 +144,6 @@ nav{
     margin-top: 20px;
 }
 
-#info {
-    text-indent: 50px;
-    text-align: justify;
-}
 
 #nameLabel {
     letter-spacing: 1px;
@@ -161,7 +155,9 @@ nav{
     font-size: 40px;
 }
 
-#info {
+#info , #descriptionProject{
+    text-indent: 30px;
+    text-align: justify;
     font-size: 12px;
     letter-spacing: .7px;
 }
@@ -196,6 +192,7 @@ nav{
 } */
 
 #Features {
+    max-height: 850px;
     width: 100%;
     overflow: hidden;
 }
@@ -215,6 +212,8 @@ nav{
 
 
 #usedIcons {
+    display: block;
+    padding: 10px 40px 0px 10px;
     color: rgb(255, 215, 95);
 }
 
@@ -232,7 +231,6 @@ nav{
     width: 250px;
     background-color: rgb(30, 30, 30);
     height: 120px;
-    padding: 10px 40px 0px 10px;
     border-radius: 15px;
 }
 
@@ -251,6 +249,7 @@ nav{
     background-color: rgb(30,30,30);
     border-radius: 15px;
     transition: width .5s ease;
+    cursor: pointer;
 }
 
 .iconContainer:hover,  .skillIcons div.activeSkill{
@@ -266,6 +265,7 @@ nav{
     margin-top: 5px;
     max-width: 450px;
     height: 50px;
+    /* display: inline; */
 }
 
 .iconContainer img {
@@ -304,10 +304,13 @@ nav{
 #description {
     position: relative;
     float: right;
-    width: 0; /* 320px*/
+    width: 0px; /* 310px*/
+    height: 0px;
+    margin-left: 100%;
     margin-bottom: 70px;
     overflow: hidden;
     transition: .3s linear;
+    z-index: 3;
 }
 
 
@@ -327,6 +330,43 @@ nav{
     background-color: rgb(167 138 48);
     color: rgb(20, 20, 20);
     border: none;
+}
+
+#descriptionIconContainer {
+    background-color: rgb(25, 25, 25);
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0px 20px 10px;
+    font-size: 13px;
+    letter-spacing: .4px;
+    color: rgb(255, 215, 95);
+    border-radius: 10px;
+}
+
+#projectIcons {
+    display: flex;
+    width: 100%;
+}
+
+#projectIcons div img, #projectIcons .iconContainer{
+    float: none;
+    height: 35px !important;
+    width: 35px;
+}
+
+
+#projectIcons .iconContainer{
+    border-radius: 7px;
+    background-color: rgb(15, 15, 15);
+    color: rgb(220,220,220);
+}
+
+#projectIcons .iconContainer:hover{
+    width: 115px;
+}
+
+#projectIcons div span {
+    padding: 8px 10px 5px 0px;
 }
 
 #pLinkRow {
@@ -355,6 +395,7 @@ nav{
     margin: 0px 15px 0px 15px;
     text-align: justify;
     font-size: 13px;
+    letter-spacing: 0px;
 }
 
 .projectRow {
@@ -425,15 +466,16 @@ nav{
 }
 
 .activeFolder .projectTitle{
-    color: rgb(106, 211, 224);
+
+    color: rgb(255, 215, 95);
 }
 
 .activeFolder .folderClose {
-    background-color: rgba(106, 211, 224,0.9);
+    background-color: rgba(255, 215, 95,0.9) !important;
 }
 
 .developing:hover .folderClose {
-    background-color: rgba(255, 215, 95,0.9) !important;
+    background-color: rgba(106, 211, 224,0.9) !important;
 }
 
 .done:hover .folderClose {
@@ -449,7 +491,7 @@ nav{
 }
 
 .developing:hover {
-    color: rgb(255, 215, 95) !important;
+    color: rgb(106, 211, 224) !important;
 }
 
 .projectPic {
@@ -566,7 +608,7 @@ nav{
     z-index: 1;
     bottom: 150%;
     left: 50%;
-    margin-left: -75px;
+    margin-left: 0px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -706,7 +748,7 @@ footer {
 
 #shortcuts {
     position: fixed;
-    z-index: 5;
+    z-index: 20;
     top: 60px;
     right: 0;
     padding: 10px;
@@ -732,6 +774,25 @@ footer {
 
 #shortcuts a.active, #shortcuts a:hover{
     color: rgb(255, 215, 95) !important;
+}
+
+#helperBox {
+    position: absolute;
+    background-color: rgba(15,15,15, 0.70);
+    font-size: 20px;
+    font-weight: 700;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    display: grid;
+    justify-content: center;
+    z-index: 5;
+}
+
+#helperBox span{
+    margin-top: 40%;
 }
 
 @media screen and (max-width: 700px){
@@ -761,7 +822,7 @@ footer {
     }
 
     #description {
-        padding-top: 40px;
+        /* padding-top: 40px; */
     }
 
     #projectList {

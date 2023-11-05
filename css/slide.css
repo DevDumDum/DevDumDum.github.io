@@ -3,6 +3,7 @@
   width:100%;
   overflow:hidden;
   margin:20px auto 0 auto;
+  cursor: not-allowed;
 }
 
 .slider ul{
@@ -34,7 +35,6 @@
   height: 100%;
   background-size: contain;
   background-position: center bottom;
-
 }
 
 

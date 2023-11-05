@@ -55,13 +55,14 @@
                 <ul id="interest">
                     <li>🌱 I’m currently learning flutter</li>
                     <li>🔭 I’m currently working on a mini mobile game</li>
-                    <li>⚡ Fun fact: I also love cycling 👀</li>
+                    <li>⚡ Fun fact: I also love cycling 🚴</li>
                 </ul>
             </div>
 
             <div id="Skills">
                 <div id="title"><hr id="titleDivider"><span id="titleLabel">SKILLS</span></div>
                 <div id="pastIconTray">
+                    <div id="helperBox" onclick="removeHelper(this)" onmouseover="removeHelper(this)"><span>Click / Hover me</span></div>
                     <span>Languages and tools I've worked with:</span><br>
                     <!-- The Icons used are from skillicons.dev-->
                     <div class="skillIcons">
@@ -86,6 +87,7 @@
                     </div>
                 </div>
                 <div id="currentIconTray">
+                    <div id="helperBox" onclick="removeHelper(this)" onmouseover="removeHelper(this)"><span>Click / Hover me</span></div>
                     <span id="usedIcons">Currently using</span>
                     <div class="skillIcons">
                         <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons/flutter-dark.svg"><span>Flutter</span></div>
@@ -99,7 +101,6 @@
             <div id="Features">
                 <div id="title"><hr id="titleDivider"><span id="titleLabel">Featured Projects</span></div>
                     <div id="projectInfo">
-                        
                         <div id="projectList">
                             <div class="slider">
                                 <!-- <a href="javascript:void(0);" class="next control">Next</a>
@@ -115,6 +116,7 @@
                             </div>
 
                             <div id="folderContainer">
+                                <div id="helperBox" onclick="removeHelper(this)" onmouseover="removeHelper(this)"><span>Click / Hover me</span></div>
                                 <div class="projectContainer done" id='0' onclick="openPop(0)">
                                     <span class="projectTitle">Hide - Seek</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
@@ -156,27 +158,27 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <div id="description">
-                            <div id="mainDescriptionContent">
-                                <div id="closeDescription"><button id="closeDescBtn" type="button" onclick="closePop()">X</button></div>
-                                <div id="descriptionTitle">Hi</div>
-                                <div id="vidContainer">
-                                    <img id='vidLoading' src="assets/images/logo.png" alt="logo">
-                                <iframe id="vid" src="" onload="vidLoaded()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                                <br>
-                                <div id="descriptionProject"></div>
-                                <div id="pLinkRow">
-                                    <a id="projectLink" class='btn active' target="_blank" rel="noopener" href="">Go to Project</a>
-                                </div>
+                    <div id="description">
+                        <div id="mainDescriptionContent">
+                            <div id="closeDescription"><button id="closeDescBtn" type="button" onclick="closePop()">X</button></div>
+                            <div id="descriptionTitle">Hi</div>
+                            <div id="vidContainer">
+                                <img id='vidLoading' src="assets/images/logo.png" alt="logo">
+                            <iframe id="vid" src="" onload="vidLoaded()" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div id="descriptionIconContainer">
+                                <span>Languages / Tools used: </span><br>
+                                <div id="projectIcons" class="skillIcons"></div>
+                            </div>
+                            <div id="descriptionProject"></div>
+                            <div id="pLinkRow">
+                                <a id="projectLink" class='btn active' target="_blank" rel="noopener" href="">Go to Project</a>
                             </div>
                         </div>
                     </div>
-
-                    <br>
-                    
+                </div>
 
                 <div id="Contact">
                     <div id="title"><hr id="titleDivider"><span id="titleLabel">Contact Me</span></div>
@@ -237,7 +239,7 @@
             ['CSS','https://api.iconify.design/skill-icons:css.svg'],
             ['JavaScript','https://api.iconify.design/skill-icons:javascript.svg'],
             ['Flutter','https://api.iconify.design/skill-icons:flutter-dark.svg'],
-            ['Python','"https://api.iconify.design/skill-icons:python-dark.svg"'],
+            ['Python','https://api.iconify.design/skill-icons:python-dark.svg'],
         ];
 
         var projects = [
@@ -273,7 +275,7 @@
 
         function copyEmail(email){
             var tooltip = document.getElementById("myTooltip");
-            tooltip.innerHTML = "Email Copied!";
+            tooltip.innerHTML = "Email Copied! "+email;
             navigator.clipboard.writeText(email);
         }
 
@@ -357,10 +359,14 @@
         function widthCheck() {
             if(document.getElementById('description').style.width == "310px" || document.getElementById('description').style.width == "100%"){
                 if(window.innerWidth > 700){
+                    document.getElementById('projectInfo').style.height = 'max-content';
                     document.getElementById('projectInfo').style.width = '320px';
+                    document.getElementById('projectInfo').style.marginLeft = '0';
                     document.getElementById('description').style.width = '310px';
                 } else {
-                    document.getElementById('projectInfo').style.width = '100%';
+                    document.getElementById('projectInfo').style.width = '0';
+                    document.getElementById('projectInfo').style.height = '0';
+                    document.getElementById('projectInfo').style.marginLeft = '-500px';
                     document.getElementById('description').style.width = '100%';
                 }
             }
@@ -399,7 +405,9 @@
         for (var i = 0; i < iconContainer.length; i++) {
             iconContainer[i].addEventListener("click", function() {
                 var currentSk = document.getElementsByClassName("activeSkill");
-                currentSk[0].className = currentSk[0].className.replace(" activeSkill", "");
+                if(currentSK.length != 0){
+                    currentSK[0].className = currentSK[0].className.replace(" activeSkill", "");
+                }
                 this.className += " activeSkill";
             });
         };
@@ -407,7 +415,9 @@
         for (var i = 0; i < iconContainer.length; i++) {
             iconContainer[i].addEventListener("mouseover", function() {
                 var currentSK = document.getElementsByClassName("activeSkill");
-                currentSK[0].className = currentSK[0].className.replace(" activeSkill", "");
+                if(currentSK.length != 0){
+                    currentSK[0].className = currentSK[0].className.replace(" activeSkill", "");
+                }
                 this.className += " activeSkill";
             });
             iconContainer[i].addEventListener("mouseout", function() {
@@ -421,7 +431,26 @@
             document.getElementById('vid').style.display = 'block';
         }
 
+        var descriptionCurrentIconList = null;
+
+        function cleanDescriptionIcons(){
+            //removes icons at description
+            if(descriptionCurrentIconList != null){
+                var id = descriptionCurrentIconList;
+                for(var i = 0; i < projects[id][3].length; i++){
+                    var pLabel = document.getElementById('projectLabel'+i);
+                    var pIcon = document.getElementById('projectIcon'+i);
+                    var pDiv = document.getElementById('projectDiv'+i);
+                    pLabel.remove();
+                    pIcon.remove();
+                    pDiv.remove();
+                }
+            }
+            descriptionCurrentIconList = null;
+        };
+
         function closePop(){
+            cleanDescriptionIcons();
             slideStatus = true;
             for(var i = 0; i < projects.length; i++){
                 document.getElementById(i).classList.remove("activeFolder");
@@ -431,7 +460,11 @@
 
             document.getElementById('projectInfo').style.width = '100%';
             document.getElementById('description').style.width = '0px';
-            document.getElementById('description').style.height = '0px';
+            document.getElementById('description').style.height = '0px'
+            document.getElementById('description').style.marginLeft = '1000px';;
+            document.getElementById('projectInfo').style.width = '100%';
+            document.getElementById('projectInfo').style.height = 'max-content';
+            document.getElementById('projectInfo').style.marginLeft = '0';
             document.getElementById('Features').scrollIntoView();
         };
 
@@ -440,6 +473,30 @@
         }
 
         function openPop(id){
+            //add icons at project description
+            if(descriptionCurrentIconList != null){
+                cleanDescriptionIcons();
+            }
+            descriptionCurrentIconList = id;
+            for(var i = 0; i < projects[id][3].length; i++){
+                const pIcon = document.getElementById('projectIcons');
+                const div = document.createElement('div');
+                div.setAttribute('id', 'projectDiv'+i);
+                div.setAttribute('class', 'iconContainer');
+                div.style.height = '35px !important';
+                pIcon.appendChild(div);
+                    const img = document.createElement('img');
+                    img.setAttribute('id', 'projectIcon'+i);
+                    img.setAttribute('alt', projectIcons[projects[id][3][i]][0]);
+                    img.src = projectIcons[projects[id][3][i]][1];
+                    document.getElementById('projectDiv'+i).appendChild(img);
+
+                    const span = document.createElement('span');
+                    span.setAttribute('id', 'projectLabel'+i);
+                    span.innerHTML = projectIcons[projects[id][3][i]][0];
+                    document.getElementById('projectDiv'+i).appendChild(span);
+            }
+
             if(document.getElementById(id).classList.length == 3){
                 closePop();
                 return;
@@ -448,6 +505,7 @@
             for(var i = 0; i < projects.length; i++){
                 document.getElementById(i).classList.remove("activeFolder");
             }
+
             document.getElementById(id).classList.add("activeFolder");
             if(projects[id][4] != ''){
                 document.getElementById('vidContainer').style.display = 'flex';
@@ -469,21 +527,29 @@
 
             if(window.innerWidth > 700){
                 document.getElementById('projectInfo').style.width = '320px';
-                document.getElementById('description').style.width = '310px';
-                document.getElementById('Features').scrollIntoView();
+                document.getElementById('projectInfo').style.height = '720px';
+                document.getElementById('description').style.width = '310px'
             } else {
                 document.getElementById('projectInfo').style.width = '100%';
                 document.getElementById('description').style.width = '100%';
-                setTimeout(scrollToDescription, 200);
+                document.getElementById('projectInfo').style.width = '0'; //100%
+                document.getElementById('projectInfo').style.height = '0';//max-content
+                document.getElementById('projectInfo').style.marginLeft = '-500px';
+                // setTimeout(scrollToDescription, 200);
             }
+            document.getElementById('description').style.marginLeft = '0px';
+            document.getElementById('Features').scrollIntoView();
             document.getElementById('description').style.height = 'max-content';
-            document.getElementById('Features').style.maxHeight = 'none';
             
             document.getElementById('descriptionTitle').innerHTML = projects[id][0];
             document.getElementById('descriptionProject').innerHTML = projects[id][1];
             document.getElementById('projectLink').href = projects[id][2];
         };
 
+
+        function removeHelper(helper){
+            helper.style.display='none';
+        }
     </script>
     <script src="js/slide.js"></script>
 </body>
