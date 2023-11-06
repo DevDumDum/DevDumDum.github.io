@@ -729,7 +729,36 @@ footer {
     font-size: 12px;
 }
 
-#burger {
+.containerBtn {
+    display: none;
+    float: right;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+width: 30px;
+height: 5px;
+background-color: #444;
+margin: 6px 0;
+transition: 0.4s;
+}
+
+.activeMenu .bar1 {
+    width: 32px;
+    transform: translate(0, 11px) rotate(45deg);
+    background-color: rgb(255, 215, 95) !important;
+}
+
+.activeMenu .bar2 {opacity: 0;}
+
+.activeMenu .bar3 {
+    width: 32px;
+    transform: translate(0, -11px) rotate(-45deg);
+    background-color: rgb(255, 215, 95) !important;
+}
+
+/* #burger {
     display: none;
     float: right;
     height: 60px;
@@ -744,7 +773,9 @@ footer {
 #burger:hover, .activeMenu {
     transform: rotate(50deg);
     color: rgb(255, 215, 95) !important;
-}
+} */
+
+
 
 #shortcuts {
     position: fixed;

@@ -24,7 +24,13 @@
                     <span id="lname">AKU</span>
                 </a>
             </div>
-            <button id="burger" class="" onclick="showMenu()">+</button>
+            
+            <div id="burger" class="containerBtn" onclick="showMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!-- <button id="burger" class="" onclick="showMenu()">+</button> -->
         </nav>
     </header>
     <ul id="shortcuts">
@@ -103,8 +109,6 @@
                     <div id="projectInfo">
                         <div id="projectList">
                             <div class="slider">
-                                <!-- <a href="javascript:void(0);" class="next control">Next</a>
-                                <a href="javascript:void(0);" class="prev control">Prev</a> -->
                                 <ul id="slides">
                                     <li><img alt="Hide&Seek" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg"></li>
                                     <li><img alt="MemoryGame" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png"></li>
@@ -372,7 +376,7 @@
             }
         }
 
-        function showMenu(){
+        function showMenu(x){
             var sh = document.getElementById('shortcuts');
             if(sh.style.display == "block"){
                 closeMenu();
