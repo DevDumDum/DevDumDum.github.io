@@ -277,6 +277,7 @@
             }, 500);
         });
 
+
         function copyEmail(email){
             var tooltip = document.getElementById("myTooltip");
             tooltip.innerHTML = "Email Copied!";
@@ -375,6 +376,14 @@
                 }
             }
         }
+
+        window.addEventListener('resize', function(event) {
+            if(window.innerWidth < 700 && document.getElementById('burger').classList.length == 1){
+                document.getElementById('shortcuts').style.display = 'none';
+            } else {
+                document.getElementById('shortcuts').style.display = 'block';
+            }
+        }, true);
 
         function showMenu(x){
             var sh = document.getElementById('shortcuts');
@@ -555,6 +564,5 @@
             helper.style.display='none';
         }
     </script>
-    <script src="js/slide.js"></script>
 </body>
 </html>
