@@ -192,7 +192,7 @@ nav{
 } */
 
 #Features {
-    max-height: 850px;
+    max-height: 880px;
     width: 100%;
     overflow: hidden;
 }
@@ -248,7 +248,7 @@ nav{
     overflow: hidden;
     background-color: rgb(30,30,30);
     border-radius: 15px;
-    transition: width .5s ease;
+    transition: width .3s ease;
     cursor: pointer;
 }
 
@@ -295,11 +295,14 @@ nav{
 }
 
 #mainDescriptionContent {
+    float: right;
+    width: 100%;
     margin-top: 30px;
     background-color: rgb(30,30,30);
-    padding-bottom: 10px;
-    border-radius: 15px;
+    border-radius: 0px 15px 15px 0px;
+    padding-bottom: 15px;
 }
+
 
 #description {
     position: relative;
@@ -311,25 +314,34 @@ nav{
     overflow: hidden;
     transition: .3s linear;
     z-index: 3;
+    display: grid;
+    grid-template-columns: 11% 89%;
 }
 
 
 #closeDescription {
-    position: absolute;
-    float: right;
+    padding-top: 30px;
+    padding-right: 5px;
     width: 100%;
-    display: flex;
-    justify-content: right;
+    height: 100%;
 }
 
 #closeDescription button {
-    height: 50px;
-    width: 50px;
+    width: 100%;
+    height: 100%;
+    /* height: 50px;
+    width: 50px; */
     font-size: 17px;
     font-weight: 600;
-    background-color: rgb(167 138 48);
-    color: rgb(20, 20, 20);
+    background-color: rgb(40,40,40);
+    color: rgb(255, 215, 95);
+    /* color: rgb(220, 220, 220); */
     border: none;
+    border-radius: 15px 0px 0px 15px;
+}
+
+#closeDescription button:hover {
+    background-color: rgb(25,25,25);
 }
 
 #descriptionIconContainer {
@@ -362,7 +374,7 @@ nav{
 }
 
 #projectIcons .iconContainer:hover{
-    width: 115px;
+    width: 120px;
 }
 
 #projectIcons div span {
@@ -380,15 +392,21 @@ nav{
     color: rgb(255, 215, 95);
 }
 
+#projectLink:hover {
+    background-color: rgb(20, 20, 20);
+}
+
 #descriptionTitle {
     display: flex;
     justify-content: left;
+    min-height: 40px;
     padding-top: 10px;
-    margin: 15px 0px 10px 20px;
-    font-size: 20px;
+    margin: 15px 0px 10px 15px;
+    font-size: 17px;
     letter-spacing: 1px;
     font-weight: 700;
     color: rgb(255, 215, 95);
+    width: 80% !important;
 }
 
 #descriptionProject {
