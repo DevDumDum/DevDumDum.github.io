@@ -79,17 +79,17 @@
                         <div class="iconContainer"><img alt="php" src="https://api.iconify.design/skill-icons:php-dark.svg"><span>PHP</span></div>
                     </div>
                     <div class="skillIcons">
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:c.svg"><span>C language</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:cpp.svg"><span>CPP</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:python-dark.svg"><span>Python</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/vscode-icons/file-type-vue.svg"><span>Vue.Js</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:flutter-dark.svg"><span>Flutter</span></div>
+                        <div class="iconContainer"><img alt="C" src="https://api.iconify.design/skill-icons:c.svg"><span>C language</span></div>
+                        <div class="iconContainer"><img alt="CPP" src="https://api.iconify.design/skill-icons:cpp.svg"><span>CPP</span></div>
+                        <div class="iconContainer"><img alt="Python" src="https://api.iconify.design/skill-icons:python-dark.svg"><span>Python</span></div>
+                        <div class="iconContainer"><img alt="Vue" src="https://api.iconify.design/vscode-icons/file-type-vue.svg"><span>Vue.Js</span></div>
+                        <div class="iconContainer"><img alt="Flutter" src="https://api.iconify.design/skill-icons:flutter-dark.svg"><span>Flutter</span></div>
                     </div>
                     <div class="skillIcons">
-                        <div class="iconContainer"><img alt="html" src="https://www.codeigniter.com/assets/icons/ci-logo.png"><span>Ci3 Framework</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:git.svg"><span>git</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:arduino.svg"><span>Arduino IDE</span></div>
-                        <div class="iconContainer"><img alt="html" src="https://api.iconify.design/skill-icons:raspberrypi-dark.svg"><span>Raspberry Pi</span></div>
+                        <div class="iconContainer"><img alt="Ci" src="https://www.codeigniter.com/assets/icons/ci-logo.png"><span>Ci3 Framework</span></div>
+                        <div class="iconContainer"><img alt="Git" src="https://api.iconify.design/skill-icons:git.svg"><span>git</span></div>
+                        <div class="iconContainer"><img alt="Arduino" src="https://api.iconify.design/skill-icons:arduino.svg"><span>Arduino IDE</span></div>
+                        <div class="iconContainer"><img alt="Rpi" src="https://api.iconify.design/skill-icons:raspberrypi-dark.svg"><span>Raspberry Pi</span></div>
                     </div>
                 </div>
                 <div id="currentIconTray">
@@ -122,6 +122,14 @@
                             <div id="folderContainer">
                                 <div id="helperBox" onclick="removeHelper(this)" onmouseover="removeHelper(this)"><span>Click / Hover me</span></div>
                                 <div class="projectContainer done" id='0' onclick="openPop(0)">
+                                    <span class="projectTitle">OFS Website</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="Hide&Seek" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/OnlineFreelancingServices/master/Documentation/Screenshot%202023-11-05%20170658.png">
+                                    </div>
+                                </div>
+
+                                <div class="projectContainer done" id='1' onclick="openPop(1)">
                                     <span class="projectTitle">Hide - Seek</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -129,7 +137,7 @@
                                     </div>
                                 </div>
         
-                                <div class="projectContainer done" id="1" onclick="openPop(1)">
+                                <div class="projectContainer done" id="2" onclick="openPop(2)">
                                     <span class="projectTitle">Memory Game</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -137,7 +145,7 @@
                                     </div>
                                 </div>
         
-                                <div class="projectContainer done" id="2" onclick="openPop(2)">
+                                <div class="projectContainer done" id="3" onclick="openPop(3)">
                                     <span class="projectTitle">Flutter Porfolio</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -145,7 +153,7 @@
                                     </div>
                                 </div>
         
-                                <div class="projectContainer done" id="3" onclick="openPop(3)">
+                                <div class="projectContainer done" id="4" onclick="openPop(4)">
                                     <span class="projectTitle">ASL CNN</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -153,7 +161,7 @@
                                     </div>
                                 </div>
         
-                                <div class="projectContainer developing" id="4" onclick="openPop(4)">
+                                <div class="projectContainer developing" id="5" onclick="openPop(5)">
                                     <span class="projectTitle">DumDumCard</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Forging~</b></span></div></div>
                                     <div class="folderContent">
@@ -244,9 +252,15 @@
             ['JavaScript','https://api.iconify.design/skill-icons:javascript.svg'],
             ['Flutter','https://api.iconify.design/skill-icons:flutter-dark.svg'],
             ['Python','https://api.iconify.design/skill-icons:python-dark.svg'],
+            ['HTML','https://api.iconify.design/skill-icons:html.svg'],
+            ['PHP','https://api.iconify.design/skill-icons:php-dark.svg'],
+            ['MySQL','https://api.iconify.design/skill-icons:mysql-dark.svg']
         ];
 
         var projects = [
+            ['OFS Website','             An academic group project that challenges us to create a website using the CodeIgniter 3 framework withing 3 months. This website serves as a form of service outsourcing for independent contractors. This project provides a link between freelancers from different fields and individuals looking for skilled workers.','https://github.com/DevDumDum/OnlineFreelancingServices',[6,2,3,7,8],'https://www.youtube.com/embed/bMciayOo2f8',
+            ['https://raw.githubusercontent.com/DevDumDum/OnlineFreelancingServices/master/Documentation/Screenshot%202023-11-05%20170658.png']],
+
             ['Hide-Seek','             The ‘Hide and Seek’ is a survival horror game. It focuses on the survival of the character throughout the game. Its also objective is attempting to scare the player using scary ambience and graphics. In addition, this game is controlled by a single-player, which means that the game is designed to be played by a one person at a time.','https://github.com/DevDumDum/Hide-Seek',[0],'https://www.youtube.com/embed/s9yl6I6REHw',
             ['https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg']],
             
