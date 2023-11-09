@@ -373,7 +373,7 @@
 
         function widthCheck() {
             if(document.getElementById('description').style.width == "310px" || document.getElementById('description').style.width == "100%"){
-                if(window.innerWidth > 700){
+                if(window.innerWidth > 990){
                     document.getElementById('projectInfo').style.height = 'max-content';
                     document.getElementById('projectInfo').style.width = '320px';
                     document.getElementById('projectInfo').style.marginLeft = '0';
@@ -388,7 +388,7 @@
         }
 
         window.addEventListener('resize', function(event) {
-            if(window.innerWidth < 700 && document.getElementById('burger').classList.length == 1){
+            if(window.innerWidth < 990 && document.getElementById('burger').classList.length == 1){
                 document.getElementById('shortcuts').style.display = 'none';
             } else {
                 document.getElementById('shortcuts').style.display = 'block';
@@ -408,7 +408,7 @@
 
         function closeMenu(){
             var sh = document.getElementById('shortcuts');
-            if(window.innerWidth <= 700 && sh.style.display == "block"){
+            if(window.innerWidth <= 990 && sh.style.display == "block"){
                 document.getElementById('burger').classList.remove('activeMenu');
                 sh.style.display = 'none';
             }
@@ -548,7 +548,7 @@
             document.getElementById('projectDescriptionImg').style.display = 'block';
             document.getElementById('slides').style.display = 'none';
 
-            if(window.innerWidth > 700){
+            if(window.innerWidth > 990){
                 document.getElementById('projectInfo').style.width = '320px';
                 document.getElementById('projectInfo').style.height = '720px';
                 document.getElementById('description').style.width = '310px'

@@ -845,7 +845,7 @@ transition: 0.4s;
     margin-top: 40%;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 990px){
     #content {
         width: 95%;
     }
