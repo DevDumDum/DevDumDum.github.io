@@ -364,6 +364,7 @@ nav{
     float: none;
     height: 35px !important;
     width: 35px;
+    font-size: 9px;
 }
 
 
@@ -374,11 +375,11 @@ nav{
 }
 
 #projectIcons .iconContainer:hover{
-    width: 120px;
+    width: 135px;
 }
 
 #projectIcons div span {
-    padding: 8px 10px 5px 0px;
+    padding: 10px 5px 0px 0px;
 }
 
 #pLinkRow {
