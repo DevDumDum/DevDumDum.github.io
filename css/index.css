@@ -171,7 +171,7 @@ nav{
     list-style-type: none;
 }
 
-#title {
+.title {
     margin-bottom: 35px;
 }
 
@@ -249,7 +249,7 @@ nav{
     background-color: rgb(30,30,30);
     border-radius: 15px;
     transition: width .3s ease;
-    cursor: pointer;
+    cursor: help;
 }
 
 .iconContainer:hover,  .skillIcons div.activeSkill{
@@ -722,6 +722,10 @@ nav{
     text-align: center;
     color: black;
     font-size: 12px;
+}
+
+.folderStatus {
+    cursor: pointer;
 }
 
 .folderStatusContainer {
