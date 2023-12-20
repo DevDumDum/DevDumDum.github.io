@@ -48,7 +48,9 @@
                 <span id="nameLabel">NAME</span> <br>
                 <span id="name"><b>Mark Allen</b></span>
                 <hr id="divider">
-                <p id="info">An aspiring software developer with a Degree in Bachelor of Science in Computer Science at the Technological University of the Philippines Manila.</p>
+                <p id="info">
+                    An aspiring software developer with a Degree in Bachelor of Science in Computer Science at the Technological University of the Philippines Manila. A knowledge and experience seeker and also, a builder and a hobbyist.
+                </p>
 
                 <ul id="interest">
                     <li>🌱 I’m currently exploring flutter</li>
@@ -102,19 +104,28 @@
                         <div id="projectList">
                             <div class="slider">
                                 <ul id="slides">
+                                    <li><img alt="DumDumCard" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg"></li>
                                     <li><img alt="OFS Website" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/OnlineFreelancingServices/master/Documentation/Screenshot%202023-11-05%20170658.png"></li>
                                     <li><img alt="Hide&Seek" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/Hide-Seek/master/assets/resources/1.jpg"></li>
                                     <li><img alt="MemoryGame" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png"></li>
-                                    <li><img alt="FlutterPortfolio" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg"></li>
                                     <li><img alt="DSARV:Robot" class="slidePic" src="https://user-images.githubusercontent.com/69324542/280517845-0cf263b6-be9c-49a3-ba18-406265bc1cff.jpg"></li>
-                                    <li><img alt="DumDumCard" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg"></li>
+                                    <li><img alt="FlutterPortfolio" class="slidePic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg"></li>
                                 </ul>
                                 <img id="projectDescriptionImg" alt="projectPicture" src="">
                             </div>
 
                             <div id="folderContainer">
                                 <div id="helperBox" onclick="removeHelper(this)" onmouseover="removeHelper(this)"><span>Click / Hover me</span></div>
-                                <div class="projectContainer done" id='0' onclick="openPop(0)">
+                                
+                                <div class="projectContainer done" id="0" onclick="openPop(0)">
+                                    <span class="projectTitle">DumDumCard</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
+                                    <div class="folderContent">
+                                        <img alt="DumDumCard" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg">
+                                    </div>
+                                </div>
+
+                                <div class="projectContainer done" id='1' onclick="openPop(1)">
                                     <span class="projectTitle">OFS Website</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -122,7 +133,7 @@
                                     </div>
                                 </div>
 
-                                <div class="projectContainer done" id='1' onclick="openPop(1)">
+                                <div class="projectContainer done" id='2' onclick="openPop(2)">
                                     <span class="projectTitle">Hide - Seek</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
@@ -130,19 +141,11 @@
                                     </div>
                                 </div>
         
-                                <div class="projectContainer done" id="2" onclick="openPop(2)">
+                                <div class="projectContainer done" id="3" onclick="openPop(3)">
                                     <span class="projectTitle">Memory Game</span>
                                     <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
                                         <img alt="MemoryGame" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png">
-                                    </div>
-                                </div>
-        
-                                <div class="projectContainer done" id="3" onclick="openPop(3)">
-                                    <span class="projectTitle">Flutter Porfolio</span>
-                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
-                                    <div class="folderContent">
-                                        <img alt="FlutterPortfolio" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg">
                                     </div>
                                 </div>
         
@@ -153,12 +156,12 @@
                                         <img alt="ASL_CNN" class="projectPic" src="https://user-images.githubusercontent.com/69324542/280517845-0cf263b6-be9c-49a3-ba18-406265bc1cff.jpg">
                                     </div>
                                 </div>
-        
-                                <div class="projectContainer developing" id="5" onclick="openPop(5)">
-                                    <span class="projectTitle">DumDumCard</span>
-                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Forging~</b></span></div></div>
+
+                                <div class="projectContainer done" id="5" onclick="openPop(5)">
+                                    <span class="projectTitle">Flutter Porfolio</span>
+                                    <div class="folderClose"><div class="folderStatusContainer"><span class="folderStatus"><br>Status:<br><b>Done</b></span></div></div>
                                     <div class="folderContent">
-                                        <img alt="DumDumCard" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg">
+                                        <img alt="FlutterPortfolio" class="projectPic" src="https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg">
                                     </div>
                                 </div>
                             </div>
@@ -234,7 +237,7 @@
         </div>
     </div>
     <footer class="footer">
-        &copy; Copyright 2023 MakuDev
+        <p>&copy; Copyright 2023 <a href="https://github.com/DevDumDum/">DevDumDum</a></p>
     </footer>
 
     <script>
@@ -254,6 +257,9 @@
         ];
 
         var projects = [
+            ['DumDumCard','             DumDum Card Game is a mobile game developed in Flutter. This mini-project is a single-player game where users flip a card and search for their pair within the given time.','https://github.com/DevDumDum/DumDumCardGame',[4],'https://drive.google.com/file/d/102ZB8otDD7vPvnAW2fb4L9kJXlLMKYvk/preview',
+            ['https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg']],
+
             ['OFS Website','             An academic group project that challenges us to create a website using the CodeIgniter 3 framework withing 3 months. This website serves as a form of service outsourcing for independent contractors. This project provides a link between freelancers from different fields and individuals looking for skilled workers.','https://github.com/DevDumDum/OnlineFreelancingServices',[6,2,3,7,8,11],'https://www.youtube.com/embed/bMciayOo2f8',
             ['https://raw.githubusercontent.com/DevDumDum/OnlineFreelancingServices/master/Documentation/Screenshot%202023-11-05%20170658.png']],
 
@@ -262,16 +268,12 @@
             
             ['MemoryGame','             A simple card flipping game where players search for the correct paired card by flipping one at a time. Players compete for the time and numbers of moves in completing the game.','https://github.com/DevDumDum/MemoryGame',[1,2,3],'https://www.youtube.com/embed/OhcTVYQ9g9w',
             ['https://raw.githubusercontent.com/DevDumDum/MemoryGame/master/assets/resource/2.png']],
-            
-            ['FlutterPorfolio','             This is my Portfolio created in Flutter. This is a product of 40 hours worth of studying and development. This is my Portfolio created in Flutter.','https://github.com/DevDumDum/FlutterPortfolio',[4],'https://www.youtube.com/embed/Hg2qo1HY_0Y',
-            ['https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg']],
 
-            ['DSARV: Fruit Segregation using a Robot Arm','             Development of Classification and Segregation of Rotten Fruits using Arm Robot with Computer Vision (DSARV) A Thesis project that segregates fruit using a robot arm that utilizes a web camera.','https://github.com/DevDumDum/Armadilo',[0,5,9,10],'https://www.youtube.com/embed/k-pHg79CGhg',
+            ['DSARV: Fruit Segregation using a Robot Arm','             Development of Classification and Segregation of Rotten Fruits using an Arm Robot with Computer Vision (DSARV) is a thesis project that segregates fruits using a robot arm that utilizes a web camera with the implementation of machine learning.','https://github.com/DevDumDum/Armadilo',[0,5,9,10],'https://www.youtube.com/embed/k-pHg79CGhg',
             ['https://user-images.githubusercontent.com/69324542/280517845-0cf263b6-be9c-49a3-ba18-406265bc1cff.jpg']],
 
-            ['DumDumCard','             DumDum Card Game is a mobile game developed in Flutter. This mini project is dedicated for me to fully learn and understand Flutter.','https://github.com/DevDumDum/DumDumCardGame',[4],'https://drive.google.com/file/d/1tgBWUbkVrYhjz4g66BcxhmMnKyH7huI1/preview',
-            ['https://raw.githubusercontent.com/DevDumDum/DumDumCardGame/master/assets/resources/1.jpg']],
-
+            ['FlutterPorfolio','             This is my Portfolio created in Flutter. This is a product of 40 hours worth of studying and development. This is my Portfolio created in Flutter.','https://github.com/DevDumDum/FlutterPortfolio',[4],'https://www.youtube.com/embed/Hg2qo1HY_0Y',
+            ['https://raw.githubusercontent.com/DevDumDum/FlutterPortfolio/development/assets/resources/8.jpg']],
         ];
 
         var currentDescriptionIcon = [];
@@ -350,11 +352,11 @@
                     document.getElementById(slideCount-1).style.color = 'rgb(220,220,220)';
                 }
 
-                if(slideCount-1 == counter){
-                    document.getElementById(counter).style.color = 'rgb(255, 215, 95)';
-                } else {
-                    document.getElementById(counter).style.color = 'rgb(82, 214, 82)';
-                }
+                // if(slideCount-1 == counter){
+                //     document.getElementById(counter).style.color = 'rgb(255, 215, 95)';
+                // } else {
+                document.getElementById(counter).style.color = 'rgb(82, 214, 82)';
+                // }
             } else {
                 document.getElementById(counter).style.color = 'rgb(220,220,220)';
             }

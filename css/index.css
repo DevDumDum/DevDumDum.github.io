@@ -156,7 +156,7 @@ nav{
 }
 
 #info , #descriptionProject{
-    text-indent: 30px;
+    text-indent: 50px;
     text-align: justify;
     font-size: 12px;
     letter-spacing: .7px;
@@ -750,6 +750,10 @@ footer {
     font-size: 15px;
     text-align: left;
     font-size: 12px;
+}
+
+footer p {
+    margin: 0;
 }
 
 .containerBtn {
