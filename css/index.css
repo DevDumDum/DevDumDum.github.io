@@ -254,9 +254,9 @@ span,
   cursor: help;
 }
 
-.iconContainer:hover,
 .skillIcons div.activeSkill {
-  width: 140px;
+  width: calc-size(auto, size);
+  transition: width 0.3s ease;
 }
 
 /* .iconContainer:hover img {
@@ -278,7 +278,7 @@ span,
 
 .iconContainer span {
   float: right;
-  padding: 16px 5px 5px 0px;
+  padding: 16px 5px 5px 10px;
   width: max-content;
   border-radius: 15px;
   transition-duration: 0.5s;
