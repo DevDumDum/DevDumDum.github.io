@@ -255,7 +255,7 @@ span,
 }
 
 .skillIcons div.activeSkill {
-  width: calc-size(auto, size);
+  width: calc-size(auto, calc(size + 10px));
   transition: width 0.3s ease;
 }
 
@@ -267,7 +267,7 @@ span,
 .skillIcons {
   margin-top: 5px;
   max-width: 450px;
-  height: 50px;
+  /* height: 50px; */
   /* display: inline; */
 }
 
@@ -278,7 +278,7 @@ span,
 
 .iconContainer span {
   float: right;
-  padding: 16px 5px 5px 10px;
+  padding: 16px 10px 5px 0px;
   width: max-content;
   border-radius: 15px;
   transition-duration: 0.5s;
@@ -357,7 +357,6 @@ span,
 }
 
 #projectIcons {
-  display: flex;
   width: 100%;
 }
 
@@ -376,12 +375,12 @@ span,
 }
 
 #projectIcons .iconContainer:hover {
-  width: calc-size(auto, size);
+  width: calc-size(auto, calc(size + 10px));
   transition: width 0.3s ease;
 }
 
 #projectIcons div span {
-  padding: 10px 5px 0px 10px;
+  padding: 10px 10px 0px 0px;
 }
 
 #pLinkRow {

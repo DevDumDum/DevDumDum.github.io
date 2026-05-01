@@ -503,13 +503,26 @@
                 cleanDescriptionIcons();
             }
             descriptionCurrentIconList = id;
+            var divContainerCounter = 0;
             for(var i = 0; i < projects[id][3].length; i++){
                 const pIcon = document.getElementById('projectIcons');
+
+                if (i == 0 || i == 4){
+                    divContainerCounter++;
+                    const newDivIconContainer = document.createElement('div');
+                    newDivIconContainer.setAttribute('id', 'projectContainerDiv'+divContainerCounter);
+                    newDivIconContainer.style.width = "100%";
+                    newDivIconContainer.style.display = "flex";
+                    pIcon.appendChild(newDivIconContainer);
+                } 
+
+                const divIconContainer = document.getElementById('projectContainerDiv'+divContainerCounter);
+                
                 const div = document.createElement('div');
                 div.setAttribute('id', 'projectDiv'+i);
                 div.setAttribute('class', 'iconContainer');
                 div.style.height = '35px !important';
-                pIcon.appendChild(div);
+                divIconContainer.appendChild(div);
                     const img = document.createElement('img');
                     img.setAttribute('id', 'projectIcon'+i);
                     img.setAttribute('alt', projectIcons[projects[id][3][i]][0]);
